@@ -408,6 +408,21 @@ input[type=number] {
 }
 
 
+.arrivals #arriving-products{
+    font-size:0;
+    width:10000vw;
+}
+
+.arrivals #arriving-products .item{
+    width:100vw;
+    height:100vh;
+    text-align:center;
+    display:inline-block;
+    vertical-align: middle;
+    background-position:center bottom;
+    background-repeat: no-repeat;
+}
+
 
 
 
