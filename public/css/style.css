@@ -423,6 +423,19 @@ input[type=number] {
     background-repeat: no-repeat;
 }
 
+.arrivals .navigation{
+    position:absolute;
+    bottom:10px;
+    text-align:center;
+    width:100%;
+}
+
+.arrivals .navigation .item{
+    display:inline-block;
+    vertical-align: middle;
+    margin:0 20px;
+}
+
 
 
 
