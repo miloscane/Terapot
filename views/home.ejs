@@ -51,15 +51,15 @@
 	</div>
 	<div class="section arrivals">
 		<div id="arriving-products">
-			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
+			<div class="item" data-active="1" style="background-image:url(/images/new-arrival-3.png)"></div>
 			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
 			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
 		</div>
 		<div class="navigation">
-			<div class="item">
+			<div class="item" onclick="scrollArrivals(-1)">
 				<img src="/icons/leftArrow.svg" width="50">
 			</div>
-			<div class="item">
+			<div class="item" onclick="scrollArrivals(1)">
 				<img src="/icons/rightArrow.svg" width="50">
 			</div>
 		</div>
