@@ -402,7 +402,10 @@ input[type=number] {
     opacity:1;
 }
 
-
+.arrivals{
+    background-size:cover;
+    background-image:url(/images/arrivals.jpg);
+}
 
 
 
