@@ -18,6 +18,7 @@ body{
     margin:0;
     font-family: 'Roboto', sans-serif;
     color: rgb(255,255,255);
+    overflow:hidden;
     font-size: 16px;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
@@ -190,6 +191,7 @@ input[type=number] {
     z-index:1100;
     font-size:0px;
     color:rgb(0,0,0);
+    margin:0 auto;
 }
 
 #menu .logo, #menu .menu{
@@ -217,6 +219,16 @@ input[type=number] {
     vertical-align: middle;
     margin-left: 20px;
     cursor: pointer;
+    font-weight:300;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+#menu .menu .itemActive{
+    font-weight:600;
 }
 
 #menu .menu .item img{
@@ -405,6 +417,7 @@ input[type=number] {
 .arrivals{
     background-size:cover;
     background-image:url(/images/arrivals.jpg);
+    background-position:center bottom;
 }
 
 
@@ -422,6 +435,7 @@ input[type=number] {
 .arrivals #arriving-products .item{
     width:100vw;
     height:100vh;
+    max-width:1920px;
     text-align:center;
     display:inline-block;
     vertical-align: middle;
@@ -445,7 +459,8 @@ input[type=number] {
 .arrivals .arrivalTitle{
     position:absolute;
     top:60px;
-    width:100%;
+    width:100vw;
+    max-width:1920px;
     text-align:center;
 }
 

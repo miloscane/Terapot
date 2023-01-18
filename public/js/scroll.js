@@ -3,6 +3,15 @@ var timeOutTime   = 1000;
 var siteWrap  = document.getElementById("site-wrap");
 var scrollableElement = document.body; //document.getElementById('scrollableElement');
 scrollableElement.addEventListener('wheel', checkScrollDirection);
+scrollableElement.addEventListener('keydown', function(event){
+  //up -> 38
+  //donw ->v40
+  if(event.keyCode==38){
+    scrollToSection(-1);
+  }else if(event.keyCode==40){
+    scrollToSection(1);
+  }
+});
 
 function getTouches(evt) {
   return evt.touches ||             // browser API
@@ -71,6 +80,7 @@ function checkScrollDirectionIsUp(event) {
 }
 
 var sections  = document.getElementsByClassName("section");
+var menuItems   = document.getElementById("menu").getElementsByClassName("item");
 for(var i=0;i<sections.length;i++){
   sections[i].dataset.active = 0;
 }
@@ -101,6 +111,15 @@ function scrollToSection(direction){
           sections[i].dataset.active = 0;
         }
         sections[nextSection].dataset.active = 1;
+        var sectionName = sections[nextSection].dataset.name;
+        for(var i=0;i<menuItems.length;i++){
+          menuItems[i].classList.remove("itemActive");
+          if(menuItems[i].dataset.name==sectionName){
+            menuItems[i].classList.add("itemActive");
+          }
+        }
+        window.location.href = "#sectionnum="+nextSection
+
         timeoutActive = true;
         setTimeout(function(){timeoutActive=false;},timeOutTime);
         if(nextSection==0){
@@ -112,3 +131,50 @@ function scrollToSection(direction){
     }
   }
 }
+
+function scrollDirectlyToSection(sectionNum){
+  siteWrap.style.top = "-" + eval(sectionNum*100) + "vh";
+  for(var i=0;i<sections.length;i++){
+    sections[i].dataset.active = 0;
+  }
+  sections[sectionNum].dataset.active=1;
+  var sectionName = sections[sectionNum].dataset.name;
+  for(var i=0;i<menuItems.length;i++){
+    menuItems[i].classList.remove("itemActive");
+    if(menuItems[i].dataset.name==sectionName){
+      menuItems[i].classList.add("itemActive");
+    }
+  }
+  window.location.href = "#sectionnum="+sectionNum
+  if(sectionNum==0){
+    document.getElementById("menu").classList.remove("whiteMenu");
+  }else{
+    document.getElementById("menu").classList.add("whiteMenu");
+  }
+}
+
+function menuScrollToSection(elem){
+  var sectionName = elem.dataset.name;
+  var sectionNum  = -1;
+  for(var i=0;i<sections.length;i++){
+    if(sections[i].dataset.name == sectionName){
+      sectionNum  = i;
+      break;
+    }
+  }
+  if(sectionNum>=0){
+    scrollDirectlyToSection(sectionNum);
+  }else{
+    console.log("Couldn't figure where to scroll based on name")
+  }
+  
+}
+
+var urlArray  = window.location.href.split("#");
+if(urlArray.length>1){
+  var activeSection = Number(urlArray[1].split("sectionnum=")[1])
+  if(!isNaN(activeSection)){
+    scrollDirectlyToSection(activeSection)
+  }
+}
+

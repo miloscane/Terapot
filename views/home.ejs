@@ -1,5 +1,5 @@
 <%- include ("partials/header") -%>
-	<div class="section home">
+	<div class="section home" data-name="about">
 		<div class="writting">
 			<div class="title">HANDCRAFTED POTS FOR TIMELESS DURABILITY</div>
 			<div class="text">All pots are made of fiberglass - material is used in various industries like marine, aerospace, architectural, medical etc.</div>
@@ -13,7 +13,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="section products">
+	<div class="section products" data-name="products">
 		<div class="product">
 			<div class="image" style="background-image:url(/images/OBLO.jpg)"></div>
 			<div class="overlay"></div>
@@ -25,7 +25,7 @@
 			<div class="text">TARA</div>
 		</div>
 	</div>
-	<div class="section products">
+	<div class="section products" data-name="products">
 		<div class="product">
 			<div class="image" style="background-image:url(/images/TISA.jpg)"></div>
 			<div class="overlay"></div>
@@ -37,7 +37,7 @@
 			<div class="text">DRINA</div>
 		</div>
 	</div>
-	<div class="section products">
+	<div class="section products" data-name="products">
 		<div class="product">
 			<div class="image" style="background-image:url(/images/STANDARD.jpg)"></div>
 			<div class="overlay"></div>
@@ -49,16 +49,28 @@
 			<div class="text">ROUND</div>
 		</div>
 	</div>
-	<div class="section arrivals">
+	<div class="section arrivals" data-name="products">
 		<div id="arriving-products" style="left:0px;">
-			<div class="item" data-active="1" style="background-image:url(/images/new-arrival-3.png)"></div>
-			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
-			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
+			<div class="item" data-active="1" style="background-image:url(/images/new-arrival-3.png)">
+				<div class="arrivalTitle">
+					<div class="button">available in april</div>
+					<div class="title">TARA<br>COLLECTION</div>
+				</div>
+			</div>
+			<div class="item" style="background-image:url(/images/new-arrival-3.png)">
+				<div class="arrivalTitle">
+					<div class="button">available in april</div>
+					<div class="title">TARA<br>COLLECTION</div>
+				</div>
+			</div>
+			<div class="item" style="background-image:url(/images/new-arrival-3.png)">
+				<div class="arrivalTitle">
+					<div class="button">available in april</div>
+					<div class="title">TARA<br>COLLECTION</div>
+				</div>
+			</div>
 		</div>
-		<div class="arrivalTitle">
-			<div class="button">available in april</div>
-			<div class="title">TARA<br>COLLECTION</div>
-		</div>
+		
 		<div class="navigation">
 			<div class="item" onclick="scrollArrivals(-1)">
 				<img src="/icons/leftArrow.svg" width="50">
@@ -84,7 +96,7 @@
 							}
 							items[newItemIndex].dataset.active=1;
 							var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-							document.getElementById("arriving-products").style.left = eval(-1*newItemIndex*vw)+"px";
+							document.getElementById("arriving-products").style.left = Math.max(eval(-1*newItemIndex*vw),-1*newItemIndex*1920)+"px";
 						}else{
 							console.log("No such item");
 						}
@@ -95,11 +107,11 @@
 			</script>
 		</div>
 	</div>
-	<div class="section vision">
+	<div class="section vision" data-name="vision">
 		<div class="overlay"></div>
 		<div class="text">At Terapot, we believe in the dream ahead. Our relentless focus on innovation, luxury, and sustainability moves us toward a future where you no longer have to choose between doing great things and doing the right thing.</div>
 	</div>
-	<div class="section diagrams">
+	<div class="section diagrams" data-name="fiberglass">
 		<div class="diagram">
 			<div class="diagramContent">
 				<div class="icon">
