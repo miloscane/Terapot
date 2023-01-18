@@ -891,12 +891,124 @@ input[type=number] {
     width:25%;
 }
 
-
-
 .contact .logosWrap .logo .wrap{
     width:80%;
     max-width:200px;
     margin:0 auto;
+}
+
+@media screen and (max-width: 959px) {
+    .home .writting{
+        width:70%;
+    }
+
+    .products .product{
+        display:block;
+        width:90%;
+        height:45vh;
+        margin:2.5vh auto;
+    }
+
+    .products .product .image{
+        width:100%;
+    }
+
+    .vision .text{
+        width:90%;
+    }
+    .contact .contactWrap .inline .wrap .icon{
+        max-width:100px;
+        margin:0 auto;
+    }
+
+    .contact .contactWrap .inline .wrap .text{
+        font-size:16px;
+        font-weight:400;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .home .writting{
+        top:90px;
+        width:90%;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    #menu .logo{
+        width:100px;
+    }
+
+    #menu .menu{
+        width:calc(100% - 100px);
+    }
+
+    .home .writting .title{
+        font-size:30px;
+        line-height:36px;
+        margin-bottom:10px;
+    }
+
+    .home .writting .text{
+        width:80%;
+    }
+
+    .home .writting .buttonsWrap .button{
+        font-size:14px;
+    }
+    .arrivals #arriving-products .item{
+        background-size:cover;
+    }
+    .vision .text{
+        font-size:26px;
+        line-height: 36px;
+    }
+    .diagrams .diagram{
+        width:50%;
+    }
+    .diagrams .diagram .diagramContent{
+        width:90%;
+    }
+
+    .diagrams .diagram .diagramContent .icon{
+        width:100px;
+        margin:0 auto;
+    }
+    .diagrams{
+        padding-top:50px;
+    }
+    .contact .title{
+        font-size:30px;
+        font-weight:600;
+    }
+
+    .contact .contactWrap .inline{
+        width:50%;
+        margin-bottom:20px;
+    }
+    .contact .contactWrap .inline .wrap .text{
+        margin-top:10px;
+    }
+    .contact .lighterDark .title{
+        margin-bottom:20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home .writting .title{
+        font-size:24px;
+        line-height:30px;
+    }
+    .contact .logosWrap .logo{
+        width:50%;
+        margin-bottom:10px;
+    }
+    .contact .logosWrap .logo .wrap{
+        width:60%;
+    }
 }
 
 
