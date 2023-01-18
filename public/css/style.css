@@ -465,6 +465,73 @@ input[type=number] {
     color:rgba(255,255,255,0.8);
 }
 
+.vision{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image:url(/images/vision.jpg);
+}
+
+.vision .overlay{
+    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.vision .text{
+    font-size:40px;
+    font-weight:400;
+    color:rgb(255,255,255);
+    line-height:55px;
+    position:relative;
+    width:50%;
+    margin:0 auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    text-align:center;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+
+.diagrams{
+    background-color:rgb(33,32,34);
+    color:rgb(219,219,219);
+    font-size:0px;
+    text-align:center;
+    padding-top:150px;
+}
+
+.diagrams .diagram{
+    width:33%;
+    display:inline-block;
+    vertical-align: top;
+    font-size:16px;
+    margin-bottom:50px;
+}
+
+
+
+.diagrams .diagram .diagramContent{
+    width:200px;
+    margin:0 auto;
+}
+
+.diagrams .diagram .diagramContent .title{
+    font-weight: 500;
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.diagrams .diagram .diagramContent .text{
+    font-size:12px;
+}
+
 
 
 
