@@ -28,10 +28,6 @@ http.listen(process.env.PORT, function(){
 	console.log('Server Started');
 });
 
-var mainFileVersion	=	new Date().getTime();
-
 server.get('/',function(req,res){
-	res.render('home',{
-		fileVersion: mainFileVersion
-	});	
+	res.render('home',{});	
 });
