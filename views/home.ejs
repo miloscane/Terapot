@@ -55,6 +55,10 @@
 			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
 			<div class="item" style="background-image:url(/images/new-arrival-3.png)"></div>
 		</div>
+		<div class="arrivalTitle">
+			<div class="button">available in april</div>
+			<div class="title">TARA<br>COLLECTION</div>
+		</div>
 		<div class="navigation">
 			<div class="item" onclick="scrollArrivals(-1)">
 				<img src="/icons/leftArrow.svg" width="50">
@@ -62,6 +66,33 @@
 			<div class="item" onclick="scrollArrivals(1)">
 				<img src="/icons/rightArrow.svg" width="50">
 			</div>
+			<script>
+				function scrollArrivals(direction){
+					var items	=	document.getElementById("arriving-products").getElementsByClassName("item");
+					var currentItemIndex	=	-1;
+					for(var i=0;i<items.length;i++){
+						if(Number(items[i].dataset.active)==1){
+							currentItemIndex	=	i;
+							break;
+						}
+					}
+					if(currentItemIndex>=0){
+						var newItemIndex	=	currentItemIndex + direction;
+						if(items[newItemIndex]){
+							for(var i=0;i<items.length;i++){
+								items[i].dataset.active=0;
+							}
+							items[newItemIndex].dataset.active=1;
+							var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+							document.getElementById("arriving-products").style.left = eval(-1*newItemIndex*vw)+"px";
+						}else{
+							console.log("No such item");
+						}
+					}else{
+						console.log("Couldnt figure out active element");
+					}
+				}
+			</script>
 		</div>
 	</div>
 <%- include ("partials/footer") -%>

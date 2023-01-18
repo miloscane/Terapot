@@ -411,6 +411,12 @@ input[type=number] {
 .arrivals #arriving-products{
     font-size:0;
     width:10000vw;
+    position: relative;
+    -webkit-transition: all ease 2s;
+    -moz-transition: all ease 2s;
+    -ms-transition: all ease 2s;
+    -o-transition: all ease 2s;
+    transition: all ease 2s;
 }
 
 .arrivals #arriving-products .item{
@@ -436,8 +442,28 @@ input[type=number] {
     margin:0 20px;
 }
 
+.arrivals .arrivalTitle{
+    position:absolute;
+    top:60px;
+    width:100%;
+    text-align:center;
+}
 
+.arrivals .arrivalTitle .button{
+    opacity:0.7;
+    background-color:rgb(255,255,255);
+    color:rgb(0,0,0);
+    border-radius:10px;
+    font-size:12px;
+    display:inline-block;
+    padding:5px;
+    margin-bottom: 20px;
+}
 
+.arrivals .arrivalTitle .title{
+    font-size:16px;
+    color:rgba(255,255,255,0.8);
+}
 
 
 
