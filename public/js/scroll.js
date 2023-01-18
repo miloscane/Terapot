@@ -1,3 +1,10 @@
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
 var timeoutActive = false;
 var timeOutTime   = 1000;
 var siteWrap  = document.getElementById("site-wrap");
