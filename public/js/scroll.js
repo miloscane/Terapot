@@ -119,7 +119,9 @@ function scrollToSection(direction){
           }
         }
         window.location.href = "#sectionnum="+nextSection
-
+        if(sections[nextSection].dataset.animationclassname){
+          sections[nextSection].classList.add(sections[nextSection].dataset.animationclassname)
+        }
         timeoutActive = true;
         setTimeout(function(){timeoutActive=false;},timeOutTime);
         if(nextSection==0){
@@ -146,6 +148,10 @@ function scrollDirectlyToSection(sectionNum){
     }
   }
   window.location.href = "#sectionnum="+sectionNum
+
+  if(sections[sectionNum].dataset.animationclassname){
+    sections[sectionNum].classList.add(sections[sectionNum].dataset.animationclassname)
+  }
   if(sectionNum==0){
     document.getElementById("menu").classList.remove("whiteMenu");
   }else{
