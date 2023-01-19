@@ -113,7 +113,7 @@ function scrollToSection(direction){
         console.log("First Section");
         
       }else{
-        siteWrap.style.top = "-" + eval(nextSection*100) + "vh";
+        siteWrap.style.top = "-" + eval(nextSection*sections[0].getBoundingClientRect().height) + "px";
         for(var i=0;i<sections.length;i++){
           sections[i].dataset.active = 0;
         }
@@ -142,7 +142,7 @@ function scrollToSection(direction){
 }
 
 function scrollDirectlyToSection(sectionNum){
-  siteWrap.style.top = "-" + eval(sectionNum*100) + "vh";
+  siteWrap.style.top = "-" + eval(sectionNum*sections[0].getBoundingClientRect().height) + "px";
   for(var i=0;i<sections.length;i++){
     sections[i].dataset.active = 0;
   }
