@@ -357,7 +357,7 @@ input[type=number] {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    width:35%;
+    width:60%;
 }
 
 .home .writting .title{
@@ -417,8 +417,8 @@ input[type=number] {
 .products .product{
     font-size:20px;
     width:50%;
-    height:95vh;
-    margin-top:2.5vh;
+    height:calc(100vh - 20px);
+    margin-top:10px;
     background-color:white;
     display:inline-block;
     vertical-align: bottom;
@@ -427,7 +427,7 @@ input[type=number] {
 }
 
 .products .product .image{
-    width:calc(100% - 3px);
+    width:calc(100% - 5px);
     position:absolute;
     left:0;
     height:100%;
@@ -442,12 +442,12 @@ input[type=number] {
 }
 
 .products .product .overlay{
-    width:calc(100% - 3px);
+    width:calc(100% - 5px);
     position:absolute;
     left:0;
     height:100%;
     top:0;
-    background:rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.3);
     -webkit-transition: all ease 1s;
     -moz-transition: all ease 1s;
     -ms-transition: all ease 1s;
@@ -467,12 +467,13 @@ input[type=number] {
 
 
 .products .product .text{
-    width:98.125%;
+    width:calc(100% - 5px);
     position:absolute;
     left:0;
     top:50%;
     text-align:center;
     font-size:40px;
+    font-weight:100;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -593,14 +594,11 @@ input[type=number] {
 }
 
 .arrivals .arrivalTitle .button{
-    opacity:0.7;
-    background-color:rgb(255,255,255);
-    color:rgb(0,0,0);
-    border-radius:10px;
-    font-size:12px;
-    display:inline-block;
-    padding:5px;
-    margin-bottom: 20px;
+    color:rgb(255,255,255);
+    margin-top:40px;
+    font-size:16px;
+    font-weight:100;
+    text-align:center;
 }
 
 .arrivals .arrivalTitle .title{
@@ -1045,6 +1043,80 @@ input[type=number] {
     margin:0 auto;
     margin-bottom:30px;
 }
+
+.fiberglass{
+    background-color: rgb(33,33,33);
+    text-align:center;
+}
+
+.fiberglass .title{
+    font-weight:700;
+    font-size:30px;
+    padding-top:70px;
+    margin-bottom:40px;
+}
+
+.fiberglass .text{
+    width:70%;
+    max-width:700px;
+    margin:0 auto;
+    font-weight:300;
+    font-size:16px;
+    line-height:20px;
+}
+
+.fiberglass .buttonWrap {
+    margin-top:30px;
+}
+
+.fiberglass .buttonWrap .button{
+    border-radius:100px;
+    border:2px solid rgb(255,255,255);
+    font-weight:500;
+    font-size:20px;
+    padding:15px 30px;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-color:rgba(255,255,255,0);
+    cursor:pointer;
+    display:inline-block;
+}
+
+.fiberglass .buttonWrap .button:hover{
+    background-color:rgba(255,255,255,0.3);
+}
+
+.fiberglass .plantersWrap{
+    text-align:center;
+    font-size:0px;
+    padding-top:20px;
+}
+
+.fiberglass .plantersWrap .planter{
+    display:inline-block;
+    vertical-align: top;
+    width:500px;
+    margin:0 5px;
+}
+
+.fiberglass .plantersWrap .planter .imageWrap{
+    height:400px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fiberglass .plantersWrap .planter .title{
+    font-weight: 500;
+    font-size:14px;
+    padding-top:10px;
+    margin:0;
+}
+
+
 
 @media screen and (max-width: 959px) {
     .home .writting{
