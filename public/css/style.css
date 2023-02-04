@@ -201,7 +201,31 @@ input[type=number] {
 }
 
 #menu .logo{
-    width:200px;
+    width:150px;
+    -webkit-transition:all ease 0.5s;
+    -moz-transition:all ease 0.5s;
+    -ms-transition:all ease 0.5s;
+    -o-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+    position:relative;
+    top:8px;
+}
+
+#menu .logo .black{
+    -webkit-transition:all ease 0.5s;
+    -moz-transition:all ease 0.5s;
+    -ms-transition:all ease 0.5s;
+    -o-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+}
+
+
+
+#menu .logo .white{
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
     -webkit-transition:all ease 0.5s;
     -moz-transition:all ease 0.5s;
     -ms-transition:all ease 0.5s;
@@ -217,18 +241,41 @@ input[type=number] {
 #menu .menu .item{
     display:inline-block;
     vertical-align: middle;
-    margin-left: 20px;
+    margin-left: 40px;
     cursor: pointer;
-    font-weight:300;
+    position:relative;
+    font-weight:500;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     -ms-transition: all ease 0.5s;
     -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
+    font-size:18px;
+}
+
+#menu .menu .item .white{
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity:0;
+}
+
+#menu .menu .item .black{
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity:1;
 }
 
 #menu .menu .itemActive{
-    font-weight:600;
+    font-weight:700;
 }
 
 #menu .menu .item img{
@@ -236,12 +283,33 @@ input[type=number] {
 }
 
 .whiteMenu{
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgba(0,0,0,0.2);
     padding:10px 5% !important;
 }
 
 .whiteMenu .logo{
     width:100px !important;
+}
+
+
+.whiteMenu .logo .white{
+    opacity:1 !important;
+}
+
+.whiteMenu .logo .black{
+    opacity:0 !important;
+}
+
+.whiteMenu .menu .item{
+    color:rgb(255,255,255);
+}
+
+.whiteMenu .menu .item .black{
+    opacity:0 !important;
+}
+
+.whiteMenu .menu .item .white{
+    opacity:1 !important;
 }
 
 #site-wrap{
@@ -274,7 +342,7 @@ input[type=number] {
 }
 
 .home{
-    background-image: url(/images/Terapot.jpg);
+    background-image: url(/images/Terapot2.jpg);
     background-size:cover;
     background-position: right bottom;
     color:rgb(0,0,0);
@@ -303,7 +371,7 @@ input[type=number] {
     width:50%;
     font-size:16px;
     line-height: 24px;
-    margin-bottom:20px;
+    margin-bottom:100px;
 }
 
 .home .writting .buttonsWrap{
@@ -313,19 +381,32 @@ input[type=number] {
 .home .writting .buttonsWrap .button{
     display:inline-block;
     vertical-align: middle;
-    font-size:18px;
+    font-size:12px;
     font-weight:500;
     padding:10px 25px;
     border:3px solid rgb(0,0,0);
     margin-right:10px;
     border-radius:25px;
     cursor:pointer;
+    background-color:rgba(0,0,0,0);
+    -webkit-transition:all ease 0.5s;
+    -moz-transition:all ease 0.5s;
+    -ms-transition:all ease 0.5s;
+    -o-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+    color:rgb(0,0,0);
 }
 
 
 .home .writting .buttonsWrap .black{
-    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,1);
     color:rgb(255,255,255);
+}
+
+.home .writting .buttonsWrap .button:hover{
+    background-color:rgba(0,0,0,0.5);
+    color:rgb(255,255,255);
+
 }
 
 .products{
@@ -346,7 +427,7 @@ input[type=number] {
 }
 
 .products .product .image{
-    width:98.125%;
+    width:calc(100% - 3px);
     position:absolute;
     left:0;
     height:100%;
@@ -361,7 +442,7 @@ input[type=number] {
 }
 
 .products .product .overlay{
-    width:98.125%;
+    width:calc(100% - 3px);
     position:absolute;
     left:0;
     height:100%;
@@ -426,11 +507,11 @@ input[type=number] {
     font-size:0;
     width:10000vw;
     position: relative;
-    -webkit-transition: all ease 2s;
-    -moz-transition: all ease 2s;
-    -ms-transition: all ease 2s;
-    -o-transition: all ease 2s;
-    transition: all ease 2s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -ms-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    transition: all ease 1s;
 }
 
 .arrivals #arriving-products .item{
@@ -455,11 +536,57 @@ input[type=number] {
     display:inline-block;
     vertical-align: middle;
     margin:0 20px;
+    border-radius:50px;
+    background-color:rgba(255,255,255,0);
+    position:relative;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.arrivals .navigation .item img{
+    display:block;
+}
+
+.arrivals .navigation .item:hover{
+    background-color:rgba(255,255,255,1);
+}
+
+
+.arrivals .navigation .item .black{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.arrivals .navigation .item .white{
+    opacity:1;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.arrivals .navigation .item:hover .white{
+    opacity:0;
+}
+
+.arrivals .navigation .item:hover .black{
+    opacity:1;
 }
 
 .arrivals .arrivalTitle{
     position:absolute;
-    top:60px;
+    top:120px;
     width:100vw;
     max-width:1920px;
     text-align:center;
@@ -477,18 +604,18 @@ input[type=number] {
 }
 
 .arrivals .arrivalTitle .title{
-    font-size:16px;
+    font-size:32px;
     color:rgba(255,255,255,0.8);
 }
 
 .vision{
     background-size:cover;
     background-repeat: no-repeat;
-    background-image:url(/images/vision.jpg);
+    background-image:url(/images/vision2.jpg);
 }
 
 .vision .overlay{
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.4);
     position:absolute;
     top:0;
     left:0;
@@ -498,11 +625,11 @@ input[type=number] {
 
 .vision .text{
     font-size:40px;
-    font-weight:400;
+    font-weight:300;
     color:rgb(255,255,255);
     line-height:55px;
     position:relative;
-    width:50%;
+    width:40%;
     margin:0 auto;
     position:absolute;
     left:50%;
@@ -828,7 +955,7 @@ input[type=number] {
 
 
 .contact{
-    background-color:rgb(33,32,34);
+    background-color:rgb(0,0,0);
     color:rgb(219,219,219);
 }
 
@@ -867,20 +994,22 @@ input[type=number] {
 }
 
 .contact .lighterDark{
-    background-color: rgb(68,68,68);
-    padding-top:30px;
-    margin-top:30px;
-    padding-bottom:30px;
+    background-color:rgb(33,32,34);
+    padding-top:80px;
 }
 
 
 .contact .lighterDark .title{
+    background-color:rgb(33,32,34);
     font-weight:300;
     margin-top:0;
     font-size:26px;
+    padding:40px 0;
 }
 
 .contact .logosWrap{
+    background-color: rgb(68,68,68);
+    padding-bottom:30px;
     font-size: 0;
     text-align:center;
 }
@@ -896,6 +1025,25 @@ input[type=number] {
     width:80%;
     max-width:200px;
     margin:0 auto;
+}
+
+.contactItemsSection{
+    text-align:center;
+    background-color:rgb(0,0,0);
+}
+
+.contactItemsSection .text:first-child{
+    padding-top:40px;
+}
+
+.contactItemsSection .text{
+    margin-bottom:15px;
+}
+
+.contactItemsSection .contactIcon{
+    width:30px;
+    margin:0 auto;
+    margin-bottom:30px;
 }
 
 @media screen and (max-width: 959px) {

@@ -2,12 +2,12 @@
 	<div class="section home" data-name="about">
 		<div class="writting">
 			<div class="title">HANDCRAFTED POTS FOR TIMELESS DURABILITY</div>
-			<div class="text">All pots are made of fiberglass - material is used in various industries like marine, aerospace, architectural, medical etc.</div>
+			<div class="text">All pots are made of fiberglass - material used in various industries like marine, aerospace, architectural, medical etc.</div>
 			<div class="buttonsWrap">
-				<div class="button black">
+				<div class="button black" onclick="scrollDirectlyToSection(9)">
 					LET'S TALK
 				</div>
-				<div class="button">
+				<div class="button" onclick="scrollDirectlyToSection(4)">
 					EXPLORE
 				</div>
 			</div>
@@ -73,10 +73,12 @@
 		
 		<div class="navigation">
 			<div class="item" onclick="scrollArrivals(-1)">
-				<img src="/icons/leftArrow.svg" width="50">
+				<img src="/icons/leftArrow.svg" width="50" class="white">
+				<img src="/icons/leftArrow-black.svg" width="50" class="black">
 			</div>
 			<div class="item" onclick="scrollArrivals(1)">
-				<img src="/icons/rightArrow.svg" width="50">
+				<img src="/icons/rightArrow.svg" width="50" class="white">
+				<img src="/icons/rightArrow-black.svg" width="50" class="black">
 			</div>
 			<script>
 				function scrollArrivals(direction){
@@ -258,41 +260,6 @@
 		</div>
 	</div>
 	<div class="section contact" data-name="contact">
-		<div class="title">GET IN TOUCH</div>
-		<div class="contactWrap">
-			<div class="inline">
-				<div class="wrap">
-					<div class="icon">
-						<a href="tel:+38163227290"><img src="/icons/call.png"></a>
-					</div>
-					<div class="text"><a href="tel:+38163227290">+381 63 227 290</a></div>
-				</div>
-			</div>
-			<div class="inline">
-				<div class="wrap">
-					<div class="icon">
-						<a href="mailto:info@terapot.eu"><img src="/icons/email.png"></a>
-					</div>
-					<div class="text"><a href="mailto:info@terapot.eu">info@terapot.eu</a></div>
-				</div>
-			</div>
-			<div class="inline">
-				<div class="wrap">
-					<div class="icon">
-						<a href="https://www.google.com/maps/place/Skulptor/@44.8566336,20.359236,17z/data=!3m1!4b1!4m5!3m4!1s0x475a667b7945c487:0xa3f5e8c83b36d4be!8m2!3d44.8566336!4d20.3614247" target="_blank"><img src="/icons/location.png"></a>
-					</div>
-					<div class="text"><a href="https://www.google.com/maps/place/Skulptor/@44.8566336,20.359236,17z/data=!3m1!4b1!4m5!3m4!1s0x475a667b7945c487:0xa3f5e8c83b36d4be!8m2!3d44.8566336!4d20.3614247" target="_blank">Autoput za Novi Sad 69</a></div>
-				</div>
-			</div>
-			<div class="inline">
-				<div class="wrap">
-					<div class="icon">
-						<a href="https://www.instagram.com/terapot.eu/" target="_blank"><img src="/icons/instagram.png"></a>
-					</div>
-					<div class="text"><a href="https://www.instagram.com/terapot.eu/" target="_blank">@terapot.eu</a></div>
-				</div>
-			</div>
-		</div>
 		<div class="lighterDark">
 			<div class="title">You may have seen us in</div>
 			<div class="logosWrap">
@@ -324,6 +291,27 @@
 						</a>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="contactItemsSection">
+			<div class="text">CONTACT</div>
+			<div class="text">
+				<a href="https://www.google.com/maps/place/Skulptor/@44.8566336,20.359236,17z/data=!3m1!4b1!4m5!3m4!1s0x475a667b7945c487:0xa3f5e8c83b36d4be!8m2!3d44.8566336!4d20.3614247" target="_blank">Beograd, Autoput za Novi<br>Sad 69</a>
+			</div>
+			<div class="contactIcon">
+				<a href="https://www.google.com/maps/place/Skulptor/@44.8566336,20.359236,17z/data=!3m1!4b1!4m5!3m4!1s0x475a667b7945c487:0xa3f5e8c83b36d4be!8m2!3d44.8566336!4d20.3614247" target="_blank"><img src="/icons/location.png"></a>
+			</div>
+			<div class="text">
+				<a href="tel:+38163227290">Phone: +381 63 227 290</a>
+			</div>
+			<div class="text">
+				<a href="tel:+38163227290">Mobile: +381 63 247 146</a>
+			</div>
+			<div class="text">
+				<a href="mailto:office@skulptor.eu">Email: office@skulptor.eu</a>
+			</div>
+			<div class="contactIcon">
+				<a href="https://www.instagram.com/terapot.eu/" target="_blank"><img src="/icons/instagram.png"></a>
 			</div>
 		</div>
 	</div>
