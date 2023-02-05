@@ -1216,7 +1216,7 @@ input[type=number] {
 
 @media screen and (max-width: 650px) {
     .home .writting{
-        top:90px;
+        top:80px;
         width:90%;
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
@@ -1234,17 +1234,21 @@ input[type=number] {
     }
 
     .home .writting .title{
-        font-size:30px;
+        font-size:22px;
         line-height:36px;
         margin-bottom:10px;
     }
 
     .home .writting .text{
         width:80%;
+        font-size:12px;
+        margin-bottom:10px;
     }
 
     .home .writting .buttonsWrap .button{
-        font-size:14px;
+        font-size:12px;
+        padding:10px;
+        border:1px solid rgb(0,0,0);
     }
     .arrivals #arriving-products .item{
         background-size:cover;
@@ -1280,7 +1284,7 @@ input[type=number] {
         margin-top:10px;
     }
     .contact .lighterDark .title{
-        margin-bottom:20px;
+        margin-bottom:2px;
     }
 
     .fiberglass .buttonWrap .button{
@@ -1305,12 +1309,15 @@ input[type=number] {
     .fiberglass .text{
         width:90%;
     }
+    .contact .lighterDark .title{
+        padding:20px 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .home .writting .title{
-        font-size:24px;
-        line-height:30px;
+        font-size:22px;
+        line-height:28px;
     }
     .contact .logosWrap .logo{
         width:50%;
@@ -1318,6 +1325,13 @@ input[type=number] {
     }
     .contact .logosWrap .logo .wrap{
         width:60%;
+    }
+
+    .contact .logosWrap{
+        padding-bottom:5px;
+    }
+    .contact .logosWrap .logo{
+        margin-bottom:2px;
     }
 }
 
