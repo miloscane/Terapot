@@ -3,7 +3,7 @@
 		<img src="/images/logo.png" class="black">
 		<img src="/images/logo-white.png" class="white">
 	</div>
-	<div class="menu">
+	<div class="menu" id="main-menu">
 		<div class="item" data-name="">
 			<img src="/icons/lang.svg" width="20" class="black">
 			<img src="/icons/lang-white.svg" width="20" class="white">
@@ -26,9 +26,19 @@
 			<img src="/icons/lang.svg" width="20" class="black">
 			<img src="/icons/lang-white.svg" width="20" class="white">
 		</div>
-		<div class="item rItemHandle">
+		<div class="item rItemHandle" onclick="responsiveMenuOpen(this)">
 			<div class="topHandle handle"></div>
 			<div class="bottomHandle handle"></div>
 		</div>
+		<script>
+			function responsiveMenuOpen(elem){
+				var menuItem = document.getElementById("menu");
+				if(menuItem.classList.contains("mainMenuOpened")){
+					menuItem.classList.remove("mainMenuOpened")
+				}else{
+					menuItem.classList.add("mainMenuOpened")
+				}
+			}
+		</script>
 	</div>
 </div>

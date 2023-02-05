@@ -1145,6 +1145,14 @@ input[type=number] {
     bottom:0px;
 }
 
+.mainMenuOpened .rItemHandle .topHandle{
+    transform: rotate(45deg) translateX(8px);
+}
+
+.mainMenuOpened .rItemHandle .bottomHandle{
+    transform: rotate(-45deg) translateX(8px);
+}
+
 .whiteMenu .rItemHandle .handle{
     background-color:rgb(255,255,255);
 }
@@ -1211,6 +1219,40 @@ input[type=number] {
     }
     .products .product .rText{
         display: block;
+    }
+
+
+
+    #menu #main-menu{
+        display:block;
+        position:absolute;
+        top:50px;
+        right:-100%;
+        width:200px;
+        padding:10px;
+        background-color:rgba(0,0,0,0);
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -ms-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+    }
+
+    .mainMenuOpened #main-menu{
+        right:0% !important;
+        background-color:rgba(0,0,0,0.2) !important;
+    }
+
+    #menu #main-menu .item{
+        margin-left:0px;
+        text-align:right;
+        display:block;
+        margin-bottom:15px;
+    }
+
+
+    #menu #main-menu .item:first-child{
+        display:none;
     }
 }
 
