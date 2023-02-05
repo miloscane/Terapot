@@ -678,26 +678,11 @@ input[type=number] {
 }
 
 .diagram2 .image{
-    position:absolute;
-    bottom:0;
-    left:0;
-    overflow:hidden;
-}
-
-.diagram2 .dotWrap{
-    position: absolute;
-    overflow-x: hidden;
-    width:1vw;
-    padding-top:2.5vw;
-    -webkit-transition: all ease 5s;
-    -moz-transition: all ease 5s;
-    -ms-transition: all ease 5s;
-    -o-transition: all ease 5s;
-    transition: all ease 5s;
-}
-
-.animatedDiagram2 .dotWrap{
-    width:100vw;
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    max-width:1920px;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .diagram2 .image img{
@@ -705,45 +690,70 @@ input[type=number] {
     display: block;
 }
 
-.diagram2 .dotWrap .relative{
-    width:100vw;
-}
-
-.diagram2 .title{
-    right:5vw;
-    top:5vw;
-    font-weight: 900;
-    position: absolute;
-    text-align: right;
-    font-size:5vw;
-    letter-spacing: 20px;
-}
-
-.diagram2 .dotWrap .dot{
-    width:0.7vw;
-    height: 0.7vw;
-    display:inline-block;
-    border-radius:10px;
-    border:2px solid rgb(255,255,255);
-    vertical-align: middle;
-}
-
-.diagram2 .dotWrap .line{
-    height:1px;
-    background-color: rgb(255,255,255);
-    width:40vw;
-    display:inline-block;
-    vertical-align: middle;
-    position:relative;
-    text-align:right;
-}
-.diagram2 .dotWrap .line .text{
+.diagram2 .image .main, .diagram2 .image .lines{
     position:absolute;
-    transform: translateY(-100%);
+    top:50%;
+    left:50%;
     width:100%;
-    text-align:right;
-    font-size:2vw;
-    font-weight:500;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.diagram2 .image .lines{
+    -webkit-transition: opacity ease 5s;
+    -moz-transition: opacity ease 5s;
+    -ms-transition: opacity ease 5s;
+    -o-transition: opacity ease 5s;
+    transition: opacity ease 5s;
+    opacity:0;
+}
+
+.animatedDiagram2 .image .lines{
+    opacity:1;
+}
+
+.diagram2 .rImage{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    max-width:1080px;
+    height: calc(var(--vh, 1vh) * 100);
+    display:none;
+}
+
+.diagram2 .rImage img{
+    display: block;
+    width:auto !important;
+    max-height: 100vh;
+    max-height:calc(var(--vh, 1vh) * 100);
+}
+
+.diagram2 .rImage .main, .diagram2 .rImage .lines{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.diagram2 .rImage .lines{
+    -webkit-transition: opacity ease 5s;
+    -moz-transition: opacity ease 5s;
+    -ms-transition: opacity ease 5s;
+    -o-transition: opacity ease 5s;
+    transition: opacity ease 5s;
+    opacity:0;
+}
+
+.animatedDiagram2 .rImage .lines{
+    opacity:1;
 }
 
 
@@ -1252,6 +1262,14 @@ input[type=number] {
 
 
     #menu #main-menu .item:first-child{
+        display:none;
+    }
+
+    .diagram2 .rImage{
+        display:block;
+    }
+
+    .diagram2 .image{
         display:none;
     }
 }
