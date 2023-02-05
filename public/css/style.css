@@ -1337,6 +1337,7 @@ input[type=number] {
 
     .fiberglass .buttonWrap{
         margin-top:10px;
+        margin-bottom:30px;
     }
 
     .fiberglass .plantersWrap .planter .title{
@@ -1353,6 +1354,9 @@ input[type=number] {
     }
     .contact .lighterDark .title{
         padding:20px 0;
+    }
+    .diagrams .diagram{
+        margin-bottom:20px;
     }
 }
 
