@@ -178,7 +178,7 @@
 					}
 					if(index>=0){
 						var nextElemIndex = index + direction;
-						if(nextElemIndex>=0 || nextElemIndex<=dots.length-1){
+						if(nextElemIndex>=0 && nextElemIndex<=dots.length-1){
 							productIndexedPick(document.getElementById("product-buttons").getElementsByClassName("button")[nextElemIndex])
 						}
 					}
