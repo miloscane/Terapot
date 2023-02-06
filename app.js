@@ -31,3 +31,7 @@ http.listen(process.env.PORT, function(){
 server.get('/',function(req,res){
 	res.render('home',{});	
 });
+
+server.get('/drina',function(req,res){
+	res.render('drina',{});	
+});

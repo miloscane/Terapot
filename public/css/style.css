@@ -312,6 +312,39 @@ input[type=number] {
     opacity:1 !important;
 }
 
+.blackMenu{
+    background-color:rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.8);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);
+    padding:10px 5% !important;
+}
+
+.blackMenu .logo{
+    width:100px !important;
+}
+
+
+.blackMenu .logo .white{
+    opacity:1 !important;
+}
+
+.blackMenu .logo .black{
+    opacity:0 !important;
+}
+
+.blackMenu .menu .item{
+    color:rgb(255,255,255);
+}
+
+.blackMenu .menu .item .black{
+    opacity:0 !important;
+}
+
+.blackMenu .menu .item .white{
+    opacity:1 !important;
+}
+
+
 #site-wrap{
     max-width:1920px;
     margin:0 auto;
@@ -1178,6 +1211,198 @@ input[type=number] {
 .rMenu{
     display:none !important;
 }
+
+.potHome{
+    background-size:cover;
+    
+    color:rgb(0,0,0);
+}
+
+.pot .buttonsWrap{
+    text-align:center;
+    margin-top:70px;
+    color:rgb(0,0,0);
+}
+
+.pot .buttonsWrap .button{
+    display:inline-block;
+    vertical-align: middle;
+    margin:30px 60px;
+    border:2px solid rgb(0,0,0);
+    padding:10px 0;
+    width:150px;
+    border-radius:100px;
+    cursor:pointer;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-color:rgba(0,0,0,0);
+    color:rgb(0,0,0);
+}
+
+.pot .buttonsWrap .buttonActive{
+    background-color: rgba(0,0,0,1) !important;
+    color:rgb(255,255,255) !important;
+}
+
+.pot .buttonsWrap .button:hover{
+    background-color:rgba(0,0,0,0.3);
+}
+
+.pot .product{
+    color:rgb(0,0,0);
+    position:relative;
+}
+
+.pot .product .slides{
+    position: absolute;
+    top:50%;
+    left:0%;
+    width:1000vw;
+    font-size:0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -ms-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    transition: all ease 1s;
+}
+
+.pot .product .slides .slide{
+    width:100vw;
+    max-width: 1920px;
+    font-size:0;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.pot .product .slides .slide .image{
+    display:inline-block;
+    vertical-align: bottom;
+    width:65vw;
+    max-width: 1248px;
+    font-size:16px;
+    text-align:right;
+}
+
+.pot .product .slides .slide .textWrap{
+    display:inline-block;
+    vertical-align: top;
+    width:35vw;
+    max-width: 672px;
+    font-size:16px;
+}
+
+.pot .product .slides .slide .textWrap .title{
+    font-weight:500;
+    font-size:36px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.pot .product .slides .slide .textWrap .subTitle{
+    font-weight:100;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.pot .product .slides .slide .textWrap .subTitle .small{
+    font-size:10px;
+}
+
+.pot .product .slides .slide .textWrap .spacer{
+    margin-bottom:20%;
+}
+
+.pot .product .slides .slide .textWrap .smallSpacer{
+    margin-bottom:10%;
+}
+
+.pot .product .slides .slide .textWrap .smallestSpacer{
+    margin-bottom:5%;
+}
+
+.pot .product .slides .slide .textWrap .text{
+    font-size:12px;
+    font-weight:100;
+}
+
+.pot .product .slides .slide .textWrap .text .bold{
+    font-weight:500;
+}
+
+.pot .product .slides .slide .textWrap .smallText{
+    font-size:9px;
+    font-weight:100;
+}
+
+.pot .product .dots{
+    text-align:center;
+    position:absolute;
+    bottom:10px;
+    width:100%;
+}
+
+.pot .product .dots .dot{
+    margin:10px 5px;
+    width:25px;
+    height:5px;
+    border-radius:5px;
+    background-color:rgb(188,188,188);
+    display:inline-block;
+    vertical-align: middle;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.pot .product .dots .dotActive{
+    background-color: rgb(81,81,81);
+}
+
+.pot .product .arrow{
+    position:absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-color: rgba(255,255,255,0);
+    opacity:1;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.pot .product .arrow:hover{
+    background-color: rgba(255,255,255,1);
+}
+
+.pot .product .arrow img{
+    display: block;
+}
+
+.pot .product .arrowLeft{
+    left:10%;
+}
+
+.pot .product .arrowRight{
+    right:10%;
+}
+
 
 @media screen and (max-width: 959px) {
     .home .writting{
