@@ -1,0 +1,103 @@
+{
+	"background":"right center",
+	"type":"standard",
+	"items":[
+		{
+			"name":"STANDARD-50x50",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"360",
+			"price":"300",
+			"dimension":"<span class='bold'>length</span> 50cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 50cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 50cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"125l",
+				"weight":"12.5kg"
+			}
+		},
+		{
+			"name":"STANDARD-60x60",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"510",
+			"price":"425",
+			"dimension":"<span class='bold'>length</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 60cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"216l",
+				"weight":"18kg"
+			}
+		},
+		{
+			"name":"STANDARD-120x60",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"660",
+			"price":"550",
+			"dimension":"<span class='bold'>length</span> 120cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 60cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"300l",
+				"weight":"23kg"
+			}
+		},
+		{
+			"name":"STANDARD-120x120",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"546",
+			"price":"455",
+			"dimension":"<span class='bold'>length</span> 120cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 120cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 60cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"105l",
+				"weight":"6.8kg"
+			}
+		},
+		{
+			"name":"STANDARD-180x60",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"930",
+			"price":"775",
+			"dimension":"<span class='bold'>length</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 60cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"690l",
+				"weight":"23kg"
+			}
+		},
+		{
+			"name":"STANDARD-180x180",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"930",
+			"price":"775",
+			"dimension":"<span class='bold'>length</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>width</span> 60cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 60cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"690l",
+				"weight":"23kg"
+			}
+		},
+		{
+			"name":"CUSTOM-MADE",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"930",
+			"price":"775",
+			"dimension":"<span class='bold'>let us know</span>",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request"
+			}
+		}
+	]
+
+}

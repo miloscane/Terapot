@@ -1,0 +1,77 @@
+{
+	"background":"left center",
+	"type":"round",
+	"items":[
+		{
+			"name":"ROUND-50",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"330",
+			"price":"275",
+			"dimension":"<span class='bold'>diameter</span> 50cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 70cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"113l",
+				"weight":"7.4kg"
+			}
+		},
+		{
+			"name":"ROUND-55",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"312",
+			"price":"260",
+			"dimension":"<span class='bold'>diameter</span> 55cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 55cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"105l",
+				"weight":"6.8kg"
+			}
+		},
+		{
+			"name":"ROUND-65",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"462",
+			"price":"385",
+			"dimension":"<span class='bold'>diameter</span> 65cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 80cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"220l",
+				"weight":"11kg"
+			}
+		},
+		{
+			"name":"ROUND-70",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"546",
+			"price":"455",
+			"dimension":"<span class='bold'>diameter</span> 55cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 55cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"105l",
+				"weight":"6.8kg"
+			}
+		},
+		{
+			"name":"ROUND-90",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"930",
+			"price":"775",
+			"dimension":"<span class='bold'>diameter</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 120cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"690l",
+				"weight":"23kg"
+			}
+		}
+	]
+
+}

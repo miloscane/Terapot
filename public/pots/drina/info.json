@@ -1,0 +1,63 @@
+{
+	"background":"left bottom",
+	"type":"drina",
+	"items":[
+		{
+			"name":"DRINA-90",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"426",
+			"price":"355",
+			"dimension":"<span class='bold'>diameter</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 42cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"205l",
+				"weight":"8kg"
+			}
+		},
+		{
+			"name":"DRINA-105",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"546",
+			"price":"455",
+			"dimension":"<span class='bold'>diameter</span> 105cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 49cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"125l",
+				"weight":"14.5kg"
+			}
+		},
+		{
+			"name":"DRINA-120",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"666",
+			"price":"555",
+			"dimension":"<span class='bold'>diameter</span> 120cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 55cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"462l",
+				"weight":"19.5kg"
+			}
+		},
+		{
+			"name":"DRINA-200",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"455",
+			"price":"455",
+			"dimension":"<span class='bold'>diameter</span> 200cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 93cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"2 150l",
+				"weight":"64kg"
+			}
+		}
+	]
+
+}

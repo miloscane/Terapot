@@ -344,6 +344,10 @@ input[type=number] {
     opacity:1 !important;
 }
 
+.blackMenu .rItemHandle .handle{
+    background-color:rgb(255,255,255);
+}
+
 
 #site-wrap{
     max-width:1920px;
@@ -1723,8 +1727,14 @@ input[type=number] {
     }
 
     .pot .product .slides .slide .textWrap .title{
-        margin-bottom:10px;
-        margin-top:10px;
+        margin-bottom:5px;
+        margin-top:0px;
+        font-size:18px;
+    }
+
+    .pot .product .slides .slide .textWrap .subTitle{
+        font-size:14px;
+        margin-bottom:4px;
     }
     .pot .product .slides .slide .textWrap .spacer{
         margin-bottom:3px;

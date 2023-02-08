@@ -32,6 +32,18 @@ server.get('/',function(req,res){
 	res.render('home',{});	
 });
 
-server.get('/drina',function(req,res){
-	res.render('drina',{});	
+
+
+
+
+
+
+server.get('/:pot',function(req,res){
+	res.render('pot',{
+		pot: JSON.parse(fs.readFileSync("./public/pots/"+req.params.pot+"/info.json")) 
+	});	
+});
+
+server.get('*',function(req,res){
+	res.send("Neposotojeci link");	
 });

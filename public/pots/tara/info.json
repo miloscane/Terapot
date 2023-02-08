@@ -1,0 +1,49 @@
+{
+	"background":"left center",
+	"type":"tara",
+	"items":[
+		{
+			"name":"TARA-90",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"408",
+			"price":"340",
+			"dimension":"<span class='bold'>diameter</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 42cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"198l",
+				"weight":"8kg"
+			}
+		},
+		{
+			"name":"TARA-105",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"522",
+			"price":"435",
+			"dimension":"<span class='bold'>diameter</span> 105cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 49cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"315l",
+				"weight":"14.6kg"
+			}
+		},
+		{
+			"name":"TARA-120",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"630",
+			"price":"525",
+			"dimension":"<span class='bold'>diameter</span> 120cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 55cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"448l",
+				"weight":"19.5kg"
+			}
+		}
+	]
+
+}

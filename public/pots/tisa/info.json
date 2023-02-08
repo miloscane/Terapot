@@ -1,0 +1,77 @@
+{
+	"background":"right center",
+	"type":"tisa",
+	"items":[
+		{
+			"name":"TISA-43",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"282",
+			"price":"235",
+			"dimension":"<span class='bold'>diameter</span> 43cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 43cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"47l",
+				"weight":"3.8kg"
+			}
+		},
+		{
+			"name":"TISA-50",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"312",
+			"price":"260",
+			"dimension":"<span class='bold'>diameter</span> 50cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 70cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"107l",
+				"weight":"7.6kg"
+			}
+		},
+		{
+			"name":"TISA-60",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"420",
+			"price":"350",
+			"dimension":"<span class='bold'>diameter</span> 98cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 67.5cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"177l",
+				"weight":"10.3kg"
+			}
+		},
+		{
+			"name":"TISA-70",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"504",
+			"price":"420",
+			"dimension":"<span class='bold'>diameter</span> 100cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 70cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"305l",
+				"weight":"17.8kg"
+			}
+		},
+		{
+			"name":"TISA-90",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"876",
+			"price":"730",
+			"dimension":"<span class='bold'>diameter</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 125cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"654l",
+				"weight":"34.5kg"
+			}
+		}
+	]
+
+}

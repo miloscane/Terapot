@@ -1,0 +1,77 @@
+{
+	"background":"right bottom",
+	"type":"oblo",
+	"items":[
+		{
+			"name":"OBLO-55",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"354",
+			"price":"295",
+			"dimension":"<span class='bold'>diameter</span> 55cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 68cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"120l",
+				"weight":"11kg"
+			}
+		},
+		{
+			"name":"OBLO-76",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"534",
+			"price":"445",
+			"dimension":"<span class='bold'>diameter</span> 76cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 86cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"140l",
+				"weight":"18kg"
+			}
+		},
+		{
+			"name":"OBLO-98",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"618",
+			"price":"515",
+			"dimension":"<span class='bold'>diameter</span> 98cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 67.5cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"350l",
+				"weight":"20kg"
+			}
+		},
+		{
+			"name":"OBLO-116",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"888",
+			"price":"740",
+			"dimension":"<span class='bold'>diameter</span> 116cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 88cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"650l",
+				"weight":"32kg"
+			}
+		},
+		{
+			"name":"OBLO-144",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"1404",
+			"price":"1170",
+			"dimension":"<span class='bold'>diameter</span> 144cm &nbsp;&nbsp;&nbsp; <span class='bold'>height</span> 106cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request",
+				"volume":"1 260l",
+				"weight":"72kg"
+			}
+		}
+	]
+
+}
