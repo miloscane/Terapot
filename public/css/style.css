@@ -1222,6 +1222,10 @@ input[type=number] {
     color:rgb(0,0,0);
 }
 
+#pot-image-phone{
+    display:none;
+}
+
 .pot .buttonsWrap{
     text-align:center;
     margin-top:70px;
@@ -1570,6 +1574,14 @@ input[type=number] {
         width:100px;
         margin-bottom:10px;
     }
+
+    #pot-image-phone{
+        display:block;
+    }
+
+    #pot-image{
+        display:none;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -1609,7 +1621,7 @@ input[type=number] {
         border:1px solid rgb(0,0,0);
     }
     .arrivals #arriving-products .item{
-        background-size:cover;
+        background-size:130%;
     }
     .vision .text{
         font-size:26px;
