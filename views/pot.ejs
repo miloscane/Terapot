@@ -4,8 +4,10 @@
 		var pot = <%-JSON.stringify(pot)%>;
 		console.log(pot)
 	</script>
-	<div class="section potHome" id="pot-image" data-name="about"></div>
-	<div class="section potHome" id="pot-image-phone" data-name="about"></div>
+	<div class="section potHome" data-name="about">
+		<div class="image" id="pot-image"></div>
+		<div class="image" id="pot-image-phone"></div>
+	</div>
 	<script>
 		document.getElementById("pot-image").setAttribute("style","background-position:"+pot.background+";background-image:url(/pots/"+pot.type+"/Naslovna.jpg")
 		document.getElementById("pot-image-phone").setAttribute("style","background-position:"+pot.background+";background-image:url(/pots/"+pot.type+"/Naslovna-Mobilni.jpg")

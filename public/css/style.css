@@ -1216,9 +1216,13 @@ input[type=number] {
     display:none !important;
 }
 
-.potHome{
+.potHome .image{
     background-size:cover;
-    
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
     color:rgb(0,0,0);
 }
 
