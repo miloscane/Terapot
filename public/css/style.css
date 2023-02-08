@@ -1404,6 +1404,24 @@ input[type=number] {
 }
 
 
+@media screen and (max-width: 1200px) {
+    .pot .buttonsWrap .button{
+        margin:20px;
+    }
+
+    .pot .product .slides .slide .textWrap .spacer{
+        margin-bottom:20px;
+    }
+
+    .pot .product .slides .slide .textWrap .smallSpacer{
+        margin-bottom: 12px;
+    }
+
+    .pot .product .slides .slide .textWrap .smallestSpacer{
+        margin-bottom: 8px;
+    }
+}
+
 @media screen and (max-width: 959px) {
     .home .writting{
         width:70%;
@@ -1496,6 +1514,57 @@ input[type=number] {
 
     .diagram2 .image{
         display:none;
+    }
+
+    .pot .product .slides .slide .image{
+        display:block;
+        width:62%;
+        margin:0 auto;
+    }
+
+    .pot .product .slides .slide .textWrap{
+        display:block;
+        width:50%;
+        max-width: 100%;
+        -webkit-transform:translateX(50%);
+        -moz-transform:translateX(50%);
+        -ms-transform:translateX(50%);
+        -o-transform:translateX(50%);
+        transform:translateX(50%);
+    }
+
+    .pot .product .slides{
+        position:absolute;
+        top:0;
+        left:0;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    .pot .product{
+        background-color:rgb(234,234,234);
+    }
+
+    .pot .product .manImage{
+        max-width:120%;
+    }
+
+    .pot .product .slides .slide .image{
+        width:82%;
+    }
+
+    .pot .product .dots{
+        top:10px;
+        bottom:auto;
+    }
+
+    .pot .buttonsWrap .button{
+        margin:5px;
+        width:100px;
+        margin-bottom:10px;
     }
 }
 
@@ -1601,6 +1670,21 @@ input[type=number] {
     .diagrams .diagram{
         margin-bottom:20px;
     }
+
+    .pot .product .dots .dot{
+        width:15px;
+        height:3px;
+        margin:3px;
+    }
+
+    .pot .product .manImage{
+        max-width:140%;
+    }
+
+    .pot .product .slides .slide .image{
+        width:92%;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -1621,6 +1705,35 @@ input[type=number] {
     }
     .contact .logosWrap .logo{
         margin-bottom:2px;
+    }
+
+    .pot .buttonsWrap .button{
+        width:72px;
+        font-size:11px;
+    }
+
+    .pot .product .manImage{
+        max-width:220%;
+        margin-left:-40%;
+    }
+
+    .pot .product .slides .slide .image{
+        width:152%;
+        margin-left:-40%;
+    }
+
+    .pot .product .slides .slide .textWrap .title{
+        margin-bottom:10px;
+        margin-top:10px;
+    }
+    .pot .product .slides .slide .textWrap .spacer{
+        margin-bottom:3px;
+    }
+    .pot .product .slides .slide .textWrap .smallSpacer{
+        margin-bottom:3px;
+    }
+    .pot .product .slides .slide .textWrap .smallestSpacer{
+        margin-bottom:3px;
     }
 }
 
