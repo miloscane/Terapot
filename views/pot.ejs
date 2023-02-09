@@ -59,7 +59,7 @@
 
 			}
 		</script>
-		<div class="product">
+		<div class="product" id="swipe-area">
 			<img src="/images/man.jpg" class="manImage">
 			<div class="slides" id="slides"></div>
 			<script>
@@ -128,6 +128,46 @@
 						slide.appendChild(textWrap);
 					document.getElementById("slides").appendChild(slide);
 				}
+				function handleTouchStart2(evt) {
+				    const firstTouch = getTouches(evt)[0];                                      
+				    xDown = firstTouch.clientX;                                      
+				    yDown = firstTouch.clientY;                                      
+				};                                                
+				                                                                         
+				function handleTouchMove2(evt) {
+				    if ( ! xDown || ! yDown ) {
+				        return;
+				    }
+
+				    var xUp = evt.touches[0].clientX;                                    
+				    var yUp = evt.touches[0].clientY;
+
+				    var xDiff = xDown - xUp;
+				    var yDiff = yDown - yUp;
+				                                                                         
+				    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+				        if ( xDiff > 0 ) {
+				            /* right swipe */ 
+				           productSlide(1)
+				        } else {
+				            /* left swipe */
+				           productSlide(-1)
+				        }                       
+				    } else {
+				        if ( yDiff > 0 ) {
+				            /* down swipe */ 
+				          scrollToSection(1);
+				        } else { 
+				            /* up swipe */
+				          scrollToSection(-1);
+				        }                                                                 
+				    }
+				    /* reset values */
+				    xDown = null;
+				    yDown = null;                                             
+				};
+				document.getElementById("swipe-area").addEventListener('touchstart', handleTouchStart2, false);        
+				document.getElementById("swipe-area").addEventListener('touchmove', handleTouchMove2, false);
 			</script>
 			<div class="dots" id="dots"></div>
 			<div class="arrow arrowLeft" id="left-arrow" style="opacity:0" onclick="productSlide(-1)">
