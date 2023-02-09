@@ -32,6 +32,10 @@ server.get('/',function(req,res){
 	res.render('home',{});	
 });
 
+server.get('/whyfiberglass',function(req,res){
+	res.render('whyfiberglass',{});	
+});
+
 
 
 

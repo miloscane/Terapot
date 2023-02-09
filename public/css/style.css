@@ -1415,6 +1415,142 @@ input[type=number] {
     right:10%;
 }
 
+.whyFiberHead{
+    background-position:70% center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image:url(/images/whyFiberHead.jpg);
+}
+
+.whyFiberTextPhoto .title{
+    color: rgb(0,0,0);
+    font-size:36px;
+    font-weight: 500;
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:20px;
+}
+
+.whyFiberTextPhoto .photoText{
+    background-image: url(/images/whyFiberPlants.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.whyFiberTextPhoto .photoText .text{
+    color:rgb(255,255,255);
+    font-size:26px;
+    line-height: 36px;
+    text-align: center;
+    margin:0 auto;
+    padding:100px 0;
+    width:40%;
+    position:relative;
+    z-index:120;
+}
+
+.whyFiberTextPhoto .photoText .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.4);
+    z-index:100;
+}
+
+.blackFont{
+    color:rgb(0,0,0);
+}
+
+.photoTextSideBySide .photo{
+    position:absolute;
+    top:0;
+    
+    width:50%;
+    height:80%;
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:10vh;
+}
+
+.photoTextSideBySideLeftPhoto .photo{
+    left:0;
+}
+
+.photoTextSideBySideRightPhoto .photo{
+    right:0;
+}
+
+.photoTextSideBySide .textWrap{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:80%;
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top:10vh;
+}
+
+.photoTextSideBySideLeftPhoto .textWrap{
+    right:0;
+}
+
+.photoTextSideBySideRightPhoto .textWrap{
+    left:0;
+}
+
+.photoTextSideBySide .textWrap .title{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+    font-weight:500;
+    font-size:36px;
+    padding-top:20px;
+    margin-bottom:60px;
+}
+
+.photoTextSideBySide .textWrap .text{
+    width:80%;
+    margin:0 auto;
+    text-align:left;
+    font-weight:300;
+    font-size:26px;
+    line-height:36px;
+}
+
+.textByText .textWrap{
+    width:50%;
+    padding:0 5%;
+    height:100%;
+    overflow:hidden;
+    position:absolute;
+    top:150px;
+}
+
+.textByText .textWrapLeft{
+    left:0;
+}
+
+.textByText .textWrapRight{
+    right:0%;
+}
+
+.textByText .textWrap .title{
+    font-size:40px;
+    font-weight:500;
+    margin-bottom:60px;
+}
+
+.textByText .textWrap .text{
+    font-weight:300;
+    font-size:18px;
+    line-height: 26px;
+}
+
 
 @media screen and (max-width: 1200px) {
     .pot .buttonsWrap .button{
@@ -1431,6 +1567,15 @@ input[type=number] {
 
     .pot .product .slides .slide .textWrap .smallestSpacer{
         margin-bottom: 8px;
+    }
+
+    .whyFiberTextPhoto .photoText .text{
+        width:60%;
+    }
+
+    .photoTextSideBySide .textWrap .text{
+        font-size:20px;
+        line-height: 28px;
     }
 }
 
@@ -1586,6 +1731,59 @@ input[type=number] {
     #pot-image{
         display:none;
     }
+
+    .whyFiberTextPhoto .photoText .text{
+        width:80%;
+    }
+
+    .photoTextSideBySide .photo{
+        width:100%;
+        height:40%;
+    }
+
+    .photoTextSideBySideLeftPhoto .photo{
+        margin-top:0px;
+        top:60%;
+    }
+
+    .photoTextSideBySideRightPhoto .photo{
+        top:60px;
+        margin-top:0px;
+    }
+
+    .photoTextSideBySide .textWrap{
+        width:100%;
+        height:50%;
+        overflow: hidden;
+    }
+
+    .photoTextSideBySideLeftPhoto .textWrap{
+        top:60px;
+        margin-top:0px;
+    }
+
+    .photoTextSideBySideRightPhoto .textWrap{
+        margin-top:0px;
+        top:50%;
+    }
+
+    .photoTextSideBySide .textWrap .title{
+        margin-bottom:10px;
+    }
+
+    .photoTextSideBySide .textWrap .text{
+        font-size:2.5vw;
+        line-height: normal;
+    }
+
+    .textByText .textWrap{
+        top:60px;
+    }
+
+    .textByText .textWrap .title{
+        margin-bottom:30px;
+        font-size:28px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -1706,6 +1904,43 @@ input[type=number] {
         width:92%;
     }
 
+    .whyFiberTextPhoto .title{
+        font-size:24px;
+    }
+
+    .whyFiberTextPhoto .photoText .text{
+        font-size:16px;
+        line-height:22px;
+    }
+
+    .photoTextSideBySide .textWrap .text{
+        font-size:3.2vw;
+    }
+
+    .textByText .textWrap{
+        width:100%;
+        height:50%;
+        padding:5% 10%;
+        overflow:hidden;
+    }
+
+    .textByText .textWrap .title{
+        margin-bottom:10px;
+    }
+    .textByText .textWrap .text{
+        font-size:2.5vw;
+        line-height:3.8vw;
+    }
+
+    .textByText .textWrapLeft{
+        top:0%;
+        padding-top:60px;
+    }
+
+    .textByText .textWrapRight{
+        top:50%;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -1761,6 +1996,19 @@ input[type=number] {
     }
     .pot .product .slides .slide .textWrap .smallestSpacer{
         margin-bottom:3px;
+    }
+
+    .photoTextSideBySide .textWrap .text{
+        font-size:4.0vw;
+    }
+
+    .photoTextSideBySide .textWrap .title{
+        font-size:6.0vw;
+    }
+
+    .textByText .textWrap .text{
+        font-size:3.2vw;
+        line-height:4.0vw;
     }
 }
 
