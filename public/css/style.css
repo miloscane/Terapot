@@ -176,7 +176,8 @@ input[type=number] {
 }
 
 #menu{
-    padding:20px 5%;
+    padding:20px 6%;
+    padding-top:40px;
     position:fixed;
     top:0px;
     width:100%;
@@ -197,11 +198,11 @@ input[type=number] {
 #menu .logo, #menu .menu{
     display:inline-block;
     vertical-align: middle;
-    font-size:14px;
+    font-size:10px;
 }
 
 #menu .logo{
-    width:150px;
+    width:115px;
     -webkit-transition:all ease 0.5s;
     -moz-transition:all ease 0.5s;
     -ms-transition:all ease 0.5s;
@@ -234,7 +235,7 @@ input[type=number] {
 }
 
 #menu .menu{
-    width:calc(100% - 150px);
+    width:calc(100% - 115px);
     text-align:right;
 }
 
@@ -244,13 +245,13 @@ input[type=number] {
     margin-left: 40px;
     cursor: pointer;
     position:relative;
-    font-weight:500;
+    font-weight:300;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     -ms-transition: all ease 0.5s;
     -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
-    font-size:18px;
+    font-size:13px;
 }
 
 #menu .menu .item .white{
@@ -275,7 +276,7 @@ input[type=number] {
 }
 
 #menu .menu .itemActive{
-    font-weight:700;
+    font-weight:500;
 }
 
 #menu .menu .item img{
@@ -283,8 +284,8 @@ input[type=number] {
 }
 
 .whiteMenu{
-    background-color:rgba(0,0,0,0.2);
-    padding:10px 5% !important;
+    background-color:rgba(26,26,26,0.94);
+    padding:15px 5% !important;
 }
 
 .whiteMenu .logo{
@@ -316,7 +317,7 @@ input[type=number] {
     background-color:rgba(0,0,0,0.2);
     background: rgba(0,0,0,0.8);
     background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);
-    padding:10px 5% !important;
+    padding:15px 5% !important;
 }
 
 .blackMenu .logo{
@@ -388,13 +389,13 @@ input[type=number] {
 .home .writting{
     position:absolute;
     top:50%;
-    left:5%;
+    left:6%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    width:60%;
+    width:41%;
 }
 
 .home .writting .title{
@@ -418,7 +419,7 @@ input[type=number] {
 .home .writting .buttonsWrap .button{
     display:inline-block;
     vertical-align: middle;
-    font-size:12px;
+    font-size:16px;
     font-weight:500;
     padding:10px 25px;
     border:3px solid rgb(0,0,0);
@@ -454,8 +455,7 @@ input[type=number] {
 .products .product{
     font-size:20px;
     width:50%;
-    height:calc(100vh - 20px);
-    margin-top:10px;
+    height:100vh;
     background-color:white;
     display:inline-block;
     vertical-align: bottom;
@@ -565,7 +565,7 @@ input[type=number] {
 
 .arrivals .navigation{
     position:absolute;
-    bottom:10px;
+    bottom:100px;
     text-align:center;
     width:100%;
 }
@@ -1049,12 +1049,11 @@ input[type=number] {
     font-weight:300;
     margin-top:0;
     font-size:26px;
-    padding:40px 0;
+    padding-top:80px;
 }
 
 .contact .logosWrap{
     background-color: rgb(68,68,68);
-    padding-bottom:30px;
     font-size: 0;
     text-align:center;
 }
@@ -1068,7 +1067,7 @@ input[type=number] {
 
 .contact .logosWrap .logo .wrap{
     width:80%;
-    max-width:200px;
+    max-width:260px;
     margin:0 auto;
 }
 
@@ -1098,9 +1097,9 @@ input[type=number] {
 
 .fiberglass .title{
     font-weight:700;
-    font-size:30px;
-    padding-top:70px;
-    margin-bottom:40px;
+    font-size:40px;
+    padding-top:100px;
+    margin-bottom:100px;
 }
 
 .fiberglass .text{
@@ -1110,10 +1109,12 @@ input[type=number] {
     font-weight:300;
     font-size:16px;
     line-height:20px;
+    margin-bottom:30px;
 }
 
 .fiberglass .buttonWrap {
     margin-top:30px;
+    margin-bottom:100px;
 }
 
 .fiberglass .buttonWrap .button{
@@ -1301,6 +1302,11 @@ input[type=number] {
     max-width: 1248px;
     font-size:16px;
     text-align:right;
+    margin-top:-3%;
+}
+
+.pot .product .slides .slide .image img{
+    margin-left:10%;
 }
 
 .pot .product .slides .slide .textWrap{
@@ -1314,7 +1320,7 @@ input[type=number] {
 .pot .product .slides .slide .textWrap .title{
     font-weight:500;
     font-size:36px;
-    margin-bottom:20px;
+    margin-bottom:17%;
     margin-top:20px;
 }
 
@@ -1774,6 +1780,7 @@ input[type=number] {
         -ms-transform:translateX(50%);
         -o-transform:translateX(50%);
         transform:translateX(50%);
+        margin-top:10%;
     }
 
     .pot .product .slides{
@@ -1797,6 +1804,7 @@ input[type=number] {
 
     .pot .product .slides .slide .image{
         width:82%;
+        margin-top:-3%;
     }
 
     .pot .product .dots{
@@ -2092,6 +2100,11 @@ input[type=number] {
     .pot .product .slides .slide .image{
         width:152%;
         margin-left:-40%;
+        margin-top:-9%;
+    }
+
+    .pot .product .slides .slide .image img{
+        margin-left:5%;
     }
 
     .pot .product .slides .slide .textWrap .title{
