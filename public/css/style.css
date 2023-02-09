@@ -1616,7 +1616,7 @@ input[type=number] {
     z-index:90;
     background:rgb(180,180,180);
     bottom:0;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.4);
+    /*box-shadow: inset 0px 0px 10px rgba(0,0,0,0.4);*/
 }
 
 .materials .table .row .text{
