@@ -129,6 +129,9 @@ function scrollToSection(direction){
         if(sections[nextSection].dataset.animationclassname){
           sections[nextSection].classList.add(sections[nextSection].dataset.animationclassname)
         }
+        if(sections[nextSection].dataset.removeanimationclassname){
+          sections[nextSection].classList.remove(sections[nextSection].dataset.removeanimationclassname)
+        }
         timeoutActive = true;
         setTimeout(function(){timeoutActive=false;},timeOutTime);
         if(nextSection==0){
@@ -158,6 +161,9 @@ function scrollDirectlyToSection(sectionNum){
 
   if(sections[sectionNum].dataset.animationclassname){
     sections[sectionNum].classList.add(sections[sectionNum].dataset.animationclassname)
+  }
+  if(sections[sectionNum].dataset.removeanimationclassname){
+    sections[sectionNum].classList.remove(sections[sectionNum].dataset.removeanimationclassname)
   }
   if(sectionNum==0){
     document.getElementById("menu").classList.remove("whiteMenu");
