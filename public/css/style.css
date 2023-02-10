@@ -1641,6 +1641,44 @@ input[type=number] {
     transform: translateY(-50%);
 }
 
+.scrollIndication{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width:40px;
+}
+
+.scrollIndication .responsive{
+    display:none;
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.50, 1.50, 1.50);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.scrollIndication .animated{
+    -webkit-animation:pulse 2s ease-in-out infinite;
+    -moz-animation:pulse 2s ease-in-out infinite;
+    animation:pulse 2s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
 
 @media screen and (max-width: 1200px) {
     .pot .buttonsWrap .button{
@@ -1900,6 +1938,14 @@ input[type=number] {
     }
     .materials .table .row .text{
         font-size:9px;
+    }
+
+    .scrollIndication .responsive{
+        display:block;
+    }
+
+    .scrollIndication .nonResponsive{
+        display:none;
     }
 }
 
