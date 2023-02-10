@@ -2,7 +2,6 @@
 	<script>
 		document.getElementById("menu").classList.add("blackMenu");
 		var pot = <%-JSON.stringify(pot)%>;
-		console.log(pot)
 	</script>
 	<div class="section potHome" data-name="about">
 		<div class="image" id="pot-image"></div>
@@ -97,7 +96,7 @@
 
 							var item = document.createElement("DIV");
 							item.setAttribute("class","text");
-							item.innerHTML	=	"dimension";
+							item.innerHTML	=	"Dimension";
 							textWrap.appendChild(item);
 
 							var item = document.createElement("DIV");
@@ -113,7 +112,7 @@
 							for(var j=0;j<attributes.length;j++){
 								var item = document.createElement("DIV");
 								item.setAttribute("class","text");
-								item.innerHTML = "<span class=\"bold\">"+attributes[j]+"</span> " + pot.items[i].attributes[attributes[j]];
+								item.innerHTML = "<span class=\"bold\">"+attributes[j].charAt(0).toUpperCase() + attributes[j].slice(1)+"</span> " + pot.items[i].attributes[attributes[j]];
 								textWrap.appendChild(item);
 							}
 

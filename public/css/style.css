@@ -1347,8 +1347,9 @@ input[type=number] {
 }
 
 .pot .product .slides .slide .textWrap .text{
-    font-size:12px;
+    font-size:16px;
     font-weight:100;
+    white-space: nowrap;
 }
 
 .pot .product .slides .slide .textWrap .text .bold{
@@ -1356,7 +1357,7 @@ input[type=number] {
 }
 
 .pot .product .slides .slide .textWrap .smallText{
-    font-size:9px;
+    font-size:12px;
     font-weight:100;
 }
 
@@ -1650,7 +1651,7 @@ input[type=number] {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    width:40px;
+    width:25px;
 }
 
 .scrollIndication .responsive{
@@ -1664,7 +1665,7 @@ input[type=number] {
   }
 
   50% {
-    transform: scale3d(1.50, 1.50, 1.50);
+    transform: scale3d(1.25, 1.25, 1.25);
   }
 
   to {
