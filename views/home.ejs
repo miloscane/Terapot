@@ -135,21 +135,22 @@
 					if(currentItemIndex>=0){
 						var newItemIndex	=	currentItemIndex + direction;
 						var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+						for(var i=0;i<items.length;i++){
+							items[i].dataset.active=0;
+						}
 						if(items[newItemIndex]){
-							for(var i=0;i<items.length;i++){
-								items[i].dataset.active=0;
-							}
+							
 							items[newItemIndex].dataset.active=1;
 							document.getElementById("arriving-products").style.left = Math.max(eval(-1*newItemIndex*vw),-1*newItemIndex*1920)+"px";
-						}/*else if(newItemIndex<=0){
+						}else if(newItemIndex<=0){
 							items[items.length-1].dataset.active=1;
 							document.getElementById("arriving-products").style.left = Math.max(eval(-1*(items.length-1)*vw),-1*(items.length-1)*1920)+"px";
 						}else if(newItemIndex>=items.length-1){
-							items[items.length-1].dataset.active=1;
+							items[0].dataset.active=1;
 							document.getElementById("arriving-products").style.left = Math.max(eval(-1*(0)*vw),-1*(0)*1920)+"px";
 						}else{
 							console.log(newItemIndex )
-						}*/
+						}
 					}else{
 						console.log("Couldnt figure out active element");
 					}
