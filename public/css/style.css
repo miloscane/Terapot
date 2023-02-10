@@ -2065,6 +2065,10 @@ input[type=number] {
         font-size:14px;
     }
 
+    .arrivals .navigation{
+        bottom:10px;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
