@@ -34,9 +34,15 @@
 			function responsiveMenuOpen(elem){
 				var menuItem = document.getElementById("menu");
 				if(menuItem.classList.contains("mainMenuOpened")){
-					menuItem.classList.remove("mainMenuOpened")
+					menuItem.classList.remove("mainMenuOpened");
+					if(document.getElementById("site-wrap").style.top=="0px"){
+						menuItem.classList.remove("whiteMenu")
+					}
 				}else{
-					menuItem.classList.add("mainMenuOpened")
+					menuItem.classList.add("mainMenuOpened");
+					if(!menuItem.classList.contains("whiteMenu")){
+						menuItem.classList.add("whiteMenu")
+					}
 				}
 			}
 		</script>
