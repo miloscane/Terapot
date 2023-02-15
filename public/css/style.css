@@ -469,71 +469,48 @@ input[type=number] {
     background-color:rgb(33,32,34);
 }
 
+.products .product .background{
+    background-image:url(/images/potBackground.jpg);
+    background-size: cover;
+    background-position: center center;
+    position:absolute;
+    top:0;
+    left:0;
+    width:calc(100% - 5px);
+    bottom:0;
+    z-index:100;
+}
+
 .products .product .image{
     width:calc(100% - 5px);
     position:absolute;
-    left:0;
-    height:100%;
-    top:0;
-    background-position: center center;
-    background-size:cover;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index:110;
 }
-
-.products .product:last-child .image{
-    right:0;
-    left:auto;
-}
-
-.products .product .overlay{
-    width:100%;
-    position:absolute;
-    left:0;
-    height:100%;
-    top:0;
-    background:rgba(0,0,0,0.3);
-    -webkit-transition: all ease 1s;
-    -moz-transition: all ease 1s;
-    -ms-transition: all ease 1s;
-    -o-transition: all ease 1s;
-    transition: all ease 1s;
-    opacity:0;
-}
-
-.products .product:last-child .overlay{
-    right:0;
-    left:auto;
-}
-
-.products .product:hover .overlay{
-    opacity:1;
-}
-
 
 .products .product .text{
     width:calc(100% - 5px);
     position:absolute;
-    left:0;
+    left:50%;
     top:50%;
-    text-align:center;
-    font-size:40px;
-    font-weight:100;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    color:rgb(255,255,255);
-    -webkit-transition: all ease 1s;
-    -moz-transition: all ease 1s;
-    -ms-transition: all ease 1s;
-    -o-transition: all ease 1s;
-    transition: all ease 1s;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    z-index:105;
     opacity:0;
-}
-
-.products .product:last-child .text{
-    right:0;
-    left:auto;
 }
 
 .products .product:hover .text{
@@ -685,10 +662,23 @@ input[type=number] {
 
 .diagrams{
     background-color:rgb(33,32,34);
+
+}
+
+.diagramsWrap{
     color:rgb(219,219,219);
     font-size:0px;
     text-align:center;
-    padding-top:150px;
+    position:absolute;
+    margin-top:60px;
+    top:50%;
+    width:100%;
+    left:0%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .diagrams .diagram{
@@ -725,7 +715,7 @@ input[type=number] {
     width: 100vw;
     height: 100vh;
     max-width:1920px;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100 - 70px);
 }
 
 .diagram2 .image img{
@@ -735,14 +725,9 @@ input[type=number] {
 
 .diagram2 .image .main, .diagram2 .image .lines{
     position:absolute;
-    top:50%;
-    left:50%;
+    left:0%;
+    bottom:0%;
     width:100%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
 }
 
 .diagram2 .image .lines{
@@ -763,27 +748,20 @@ input[type=number] {
     width: 100vw;
     height: 100vh;
     max-width:1080px;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 100 - 70px);
     display:none;
 }
 
 .diagram2 .rImage img{
     display: block;
     width:auto !important;
-    max-height: 100vh;
-    max-height:calc(var(--vh, 1vh) * 100);
 }
 
 .diagram2 .rImage .main, .diagram2 .rImage .lines{
     position:absolute;
-    top:50%;
-    left:50%;
+    bottom:0%;
+    left:0%;
     width:100%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
 }
 
 .diagram2 .rImage .lines{
@@ -1113,7 +1091,7 @@ input[type=number] {
     max-width:700px;
     margin:0 auto;
     font-weight:300;
-    font-size:16px;
+    font-size:19px;
     line-height:20px;
     margin-bottom:30px;
 }
@@ -1978,9 +1956,9 @@ input[type=number] {
 .contact .lighterDark .title .background{
     position:absolute;
     z-index:100;
-    top:0;
-    left:-1000vw;
-    width:2000vw;
+    top:-100vh;
+    left:-2000vw;
+    width:4000vw;
     bottom:0;
     background-color:rgb(33,32,34);
 }
@@ -2026,15 +2004,61 @@ input[type=number] {
         width:70%;
     }
 
+    .products{
+        padding-top:60px !important;
+    }
     .products .product{
         display:block;
         width:100%;
-        height:calc(50vh - 5px);
+        height:calc(50vh - 35px);
         margin:5px auto;
     }
 
-    .products .product .image{
+    .products .product .background{
         width:100%;
+    }
+
+    .products .product:first-child .image{
+        bottom:0;
+        top:auto;
+        -webkit-transform: translate(-50%,0%);
+        -moz-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+        -o-transform: translate(-50%,0%);
+        transform: translate(-50%,0%);
+    }
+
+    .products .product:first-child .text{
+        bottom:0;
+        top:auto;
+        -webkit-transform: translate(-50%,0%);
+        -moz-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+        -o-transform: translate(-50%,0%);
+        transform: translate(-50%,0%);
+    }
+
+    .products .product .image{
+        max-height:calc(50vh - 30px);
+    }
+
+
+    .products .product .image img{
+        max-height:calc(50vh - 30px);
+        display:block;
+        margin:0 auto;
+    }
+
+    .products .product .text{
+        max-height:calc(50vh - 30px);
+        opacity:1;
+    }
+
+
+    .products .product .text img{
+        max-height:calc(50vh - 30px);
+        display:block;
+        margin:0 auto;
     }
 
 
@@ -2450,6 +2474,10 @@ input[type=number] {
 
     .arrivals .navigation{
         bottom:30px;
+    }
+
+    .diagramsWrap{
+        margin-top:30px;
     }
 }
 
