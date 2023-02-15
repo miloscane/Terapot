@@ -4,7 +4,8 @@ for(var i=0;i<sections.length;i++){
 	if(scalingElem){
 		var box = scalingElem.getBoundingClientRect();
 		for(var j=0;j<100;j++){
-			if(box.height*((100-j)/100)+20>screenHeight){
+			var boxCheck = box.height*((100-j)/100)+20;
+			if(boxCheck>screenHeight){
 				scalingElem.style.transform = "scale("+eval(100-j)/100+")";
 			}else{
 				break;

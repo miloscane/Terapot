@@ -2573,6 +2573,55 @@ input[type=number] {
     .diagram2 .image{
         display:block;
     }
+
+    .products .product{
+        width: 50%;
+        height: 100vh;
+        background-color: white;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .products .product:first-child .text{
+        bottom:auto;
+        top:0%;
+    }
+
+    .products .product:first-child .image{
+        bottom:auto;
+        top:0%;
+    }
+
+    .products .product .image{
+        max-height:100vh;
+    }
+
+    .products .product .text{
+        max-height:100vh;
+    }
+
+    .products .product .image img{
+        width:calc(100% - 5px);
+        max-height:none;
+    }
+
+    .products .product .text img{
+        width:calc(100% - 5px);
+        max-height: none;
+    }
+
+    .pot .responsive{
+        display:none;
+    }
+
+    .pot .nonResponsive{
+        display:block;
+    }
+
+    .pot .buttonsWrap{
+        margin-top:0px;
+    }
+    
 }
 
 
