@@ -2595,20 +2595,24 @@ input[type=number] {
 
     .products .product .image{
         max-height:100vh;
+        max-height: calc(var(--vh, 1vh) * 100 - 70px);
     }
 
     .products .product .text{
         max-height:100vh;
+        max-height: calc(var(--vh, 1vh) * 100 - 70px);
     }
 
     .products .product .image img{
-        width:calc(100% - 5px);
-        max-height:none;
+        width:auto;
+        max-height:100vh;
+        max-height: calc(var(--vh, 1vh) * 100 - 70px);
     }
 
     .products .product .text img{
-        width:calc(100% - 5px);
-        max-height: none;
+        width:auto;
+        max-height:100vh;
+        max-height: calc(var(--vh, 1vh) * 100 - 70px);
     }
 
     .pot .responsive{
