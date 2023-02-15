@@ -774,11 +774,33 @@ input[type=number] {
     opacity:0;
 }
 
+.diagram2 .lImage .main, .diagram2 .lImage .lines{
+    position:absolute;
+    bottom:0%;
+    left:0%;
+    width:100%;
+}
+
+.diagram2 .lImage .lines{
+    -webkit-transition: opacity ease 5s;
+    -moz-transition: opacity ease 5s;
+    -ms-transition: opacity ease 5s;
+    -o-transition: opacity ease 5s;
+    transition: opacity ease 5s;
+    opacity:0;
+}
+
 .animatedDiagram2 .rImage .lines{
     opacity:1;
 }
 
+.animatedDiagram2 .lImage .lines{
+    opacity:1;
+}
 
+.diagram2 .lImage{
+    display:none;
+}
 
 
 
@@ -2022,7 +2044,7 @@ input[type=number] {
     top:-100vh;
     left:-2000vw;
     width:4000vw;
-    bottom:0;
+    bottom:-20vh;
     background-color:rgb(33,32,34);
 }
 
@@ -2326,6 +2348,11 @@ input[type=number] {
     .arrivals .arrivalTitle{
         top:0;
     }
+
+    .products{
+        background:rgb(230,230,230);
+        background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(230,230,230,1) 31%, rgba(32,32,32,1) 44%);
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -2372,7 +2399,7 @@ input[type=number] {
     }
     .arrivals #arriving-products .item{
         background-size:100%;
-        background-position:center 0%;
+        background-position:center bottom;
     }
     .vision .text{
         font-size:26px;
@@ -2565,6 +2592,11 @@ input[type=number] {
     .diagramsWrap{
         margin-top:30px;
     }
+
+    .arrivals #arriving-products .item{
+        background-size:100%;
+        background-position:center 20%;
+    }
 }
 
 @media screen and ( max-height: 450px ) {
@@ -2575,32 +2607,54 @@ input[type=number] {
         display:block;
     }
 
+    .products{
+        background:none;
+        background-color: rgb(33,33,33);
+    }
+
     .products .product{
-        width: 50%;
+        width: calc(50% - 3px);
         height: 100vh;
         background-color: white;
         display: inline-block;
         vertical-align: middle;
     }
 
-    .products .product:first-child .text{
-        bottom:auto;
-        top:0%;
+    .products .product:first-child{
+        margin-right:3px;
     }
 
-    .products .product:first-child .image{
-        bottom:auto;
-        top:0%;
+    .products .product:last-child{
+        margin-left:3px;
     }
+
+    
 
     .products .product .image{
         max-height:100vh;
         max-height: calc(var(--vh, 1vh) * 100 - 70px);
+        text-align: center;
+        bottom:auto !important;
+        top:0 !important;
+        -webkit-transform:translate(-50%,0%);
+        -moz-transform:translate(-50%,0%);
+        -ms-transform:translate(-50%,0%);
+        -o-transform:translate(-50%,0%);
+        transform:translate(-50%,0%);
     }
 
     .products .product .text{
         max-height:100vh;
         max-height: calc(var(--vh, 1vh) * 100 - 70px);
+        text-align: center;
+        opacity:1;
+        bottom:auto !important;
+        top:0 !important;
+        -webkit-transform:translate(-50%,0%);
+        -moz-transform:translate(-50%,0%);
+        -ms-transform:translate(-50%,0%);
+        -o-transform:translate(-50%,0%);
+        transform:translate(-50%,0%);
     }
 
     .products .product .image img{
@@ -2638,9 +2692,53 @@ input[type=number] {
 
     .arrivals #arriving-products .item{
         background-size: 50% auto;
-        background-position:center bottom;
+        background-position:center 130%;
     }
-    
+    .arrivals .arrivalTitle .button{
+        margin-top:5px;
+    }
+
+    #pot-image-phone{
+        display:none;
+    }
+
+    #pot-image{
+        display:block;
+    }
+
+    .diagrams .diagram{
+        width:33%;
+    }
+
+    .diagrams .contents{
+        position:relative;
+        top:-35px;
+    }    
+
+    .diagram2 .lImage{
+        display:block;
+    }
+
+
+    .diagram2 .rImage, .diagram2 .image{
+        display:none;
+    }
+
+    #menu{
+        padding-top:20px;
+    }
+
+    .pot .product .slides .slide{
+        -webkit-transform:scale(0.7);
+        -moz-transform:scale(0.7);
+        -ms-transform:scale(0.7);
+        -o-transform:scale(0.7);
+        transform:scale(0.7);
+    }
+
+    .pot .buttonsWrap .button{
+        margin:5px;
+    }
 }
 
 
