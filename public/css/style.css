@@ -2127,6 +2127,8 @@ input[type=number] {
 
     .vision .text{
         width:90%;
+        font-size:3.5vw;
+        line-height: 4vw;
     }
     .contact .contactWrap .inline .wrap .icon{
         max-width:100px;
@@ -2561,6 +2563,15 @@ input[type=number] {
 
     .diagramsWrap{
         margin-top:30px;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .diagram2 .rImage{
+        display:none;
+    }
+    .diagram2 .image{
+        display:block;
     }
 }
 
