@@ -201,3 +201,7 @@ if(urlArray.length>1){
   }
 }
 
+window.addEventListener("orientationchange", function() {
+  location.reload()
+}, false);
+
