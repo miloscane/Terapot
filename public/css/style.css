@@ -2073,7 +2073,8 @@ input[type=number] {
     .products .product{
         display:block;
         width:100%;
-        height:calc(50vh - 35px);
+        height: calc(50vh - 35px);
+        height: calc(var(--vh, 1vh) * 50 - 35px);
         margin:5px auto;
     }
 
@@ -2108,18 +2109,22 @@ input[type=number] {
 
     .products .product .image img{
         max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50 - 30px);
+        width:auto;
         display:block;
         margin:0 auto;
     }
 
     .products .product .text{
         max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50 - 30px);
         opacity:1;
     }
 
 
     .products .product .text img{
         max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50 - 30px);
         display:block;
         margin:0 auto;
     }
@@ -2150,10 +2155,6 @@ input[type=number] {
 
     #body .whiteMenu .menu{
         width:calc(100% - 100px);
-    }
-
-    .products .product:hover .text{
-        opacity:0;
     }
 
     .products .product:hover .overlay{
