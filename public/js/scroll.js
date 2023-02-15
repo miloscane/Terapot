@@ -184,6 +184,10 @@ function menuScrollToSection(elem){
   if(sectionNum>=0){
     scrollDirectlyToSection(sectionNum);
   }else{
+    if(elem.dataset.sectionnum){
+      window.location.href = "/#sectionnum="+elem.dataset.sectionnum
+    }
+    
     console.log("Couldn't figure where to scroll based on name")
   }
   

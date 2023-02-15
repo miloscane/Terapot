@@ -210,6 +210,7 @@ input[type=number] {
     transition:all ease 0.5s;
     position:relative;
     top:8px;
+    cursor:pointer;
 }
 
 #menu .logo .black{
@@ -1309,7 +1310,6 @@ input[type=number] {
     font-weight:500;
     font-size:36px;
     margin-bottom:6%;
-    margin-top:17%;
 }
 
 .pot .product .slides .slide .textWrap .subTitle{
@@ -1426,7 +1426,7 @@ input[type=number] {
     right:0;
     bottom:0;
     z-index:100;
-    background-image:url(/images/man.jpg);
+    background-image:url(/images/manResponsive.jpg);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -1461,6 +1461,7 @@ input[type=number] {
     width:100vw;
     display:inline-block;
     vertical-align: middle;
+    margin-right:50vw;
 }
 
 .pot .responsive .images .slides .slide .image{
@@ -1483,30 +1484,84 @@ input[type=number] {
     width:100vw;
     display:inline-block;
     vertical-align: middle;
-    padding-left:1%;
+    position: relative;
+    margin-right:50vw;
 }
 
 .pot .responsive .textWrap .title{
     font-weight:500;
     font-size:10vw;
+    text-align:center;
 }
 
 .pot .responsive .textWrap .subTitle{
     font-weight:100;
     font-size:4vw;
+    text-align:center;
+}
+
+.pot .responsive .textsWrap .textWrap .inlines{
+    font-weight:0;
+}
+
+.pot .responsive .textsWrap .textWrap .inlines .inline{
+    vertical-align: bottom;
+    display:inline-block;
+    text-align:center;
+    width:20%;
+    margin-bottom:5px;
+}
+
+
+.pot .responsive .textsWrap .textWrap .price{
+    position:absolute;
+    bottom:0;
+    right:10%;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    z-index:3000;
+}
+
+
+
+.pot .responsive .textsWrap .textWrap .price{
+    font-weight:300;
+    font-size:2vw;
+    color:rgb(94,94,94);
+    background-color: rgb(183,183,183);
+    padding:3px;
+    border-radius:0px 0px 4px 4px;
+}
+
+
+.pot .responsive .textsWrap .textWrap .price .small{
+    font-size:1vw;
+}
+
+
+.pot .responsive .textsWrap .textWrap .inlines .inline .itemTitle{
+    margin-bottom:10px;
+}
+
+.pot .responsive .textsWrap .textWrap .inlines .inline .itemContents .contentItem{
+    display:inline-block;
+    vertical-align:bottom;
+    width:45%;
 }
 
 .pot .responsive .textWrap .subTitle .small{
     font-size:2vw;
 }
 
-.pot .responsive .textWrap .text{
-    font-size:3.5vw;
+.pot .responsive .textWrap .inline{
+    font-size:2.5vw;
     font-weight:100;
-    white-space: nowrap;
 }
 
-.pot .responsive .textWrap .text .bold{
+.pot .responsive .textWrap .inline .bold{
     font-weight:500;
 }
 
@@ -1546,6 +1601,7 @@ input[type=number] {
     text-align:center;
     margin-top:2vw;
     color:rgb(0,0,0);
+    display:none;
 }
 
 .pot .responsive .buttons .button{
@@ -1657,7 +1713,7 @@ input[type=number] {
     background-repeat: no-repeat;
     margin-top:10vh;
     text-align: center;
-    padding:0 40px;
+    padding:0 100px;
 }
 
 .photoTextSideBySideLeftPhoto .textWrap{
@@ -1690,10 +1746,16 @@ input[type=number] {
     font-size: 1.3vw;
     line-height: 1.6vw;
     padding-top:60px;
+    letter-spacing:normal;
 }
 
-.textByText{
+#site-wrap .textByText{
     font-size:0;
+    padding-top:200px !important;
+}
+
+#site-wrap .materials{
+    padding-top:200px !important;
 }
 
 
@@ -1726,6 +1788,7 @@ input[type=number] {
     margin:0 auto;
     text-align:justify;
     padding-top: 60px;
+    letter-spacing: normal;
 }
 
 .materials .title{
@@ -2164,7 +2227,7 @@ input[type=number] {
         width:100%;
         display:block;
         margin-top:0;
-        padding:0px;
+        padding:0px 50px;
     }
 
     .photoTextSideBySide .textWrap .title{
@@ -2247,6 +2310,18 @@ input[type=number] {
     }
     .contact .lighterDark{
         padding-top:0px;
+    }
+
+    #site-wrap .materials{
+        padding-top:70px !important;
+    }
+
+    #site-wrap .textByText{
+        padding-top:10px !important;
+    }
+
+    .arrivals .arrivalTitle{
+        top:0;
     }
 }
 
@@ -2373,6 +2448,10 @@ input[type=number] {
         font-size:3.2vw;
     }
 
+    .photoTextSideBySide .textWrap .title{
+        font-size:5.5vw;
+    }
+
     .textByText .textWrap{
         width:100%;
         height:50%;
@@ -2409,11 +2488,11 @@ input[type=number] {
     }
 
     .pot .responsive .textWrap .title{
-        font-size:10vw;
+        font-size:6vw;
     }
 
     .pot .responsive .textWrap .subTitle{
-        font-size:6vw;
+        font-size:3vw;
     }
 
     .pot .responsive .textWrap .subTitle .small{
@@ -2430,6 +2509,10 @@ input[type=number] {
 
     .pot .responsive .buttons .button{
         font-size:3.5vw;
+    }
+
+    #site-wrap .textByText{
+        padding-top:70px !important;
     }
 
 }

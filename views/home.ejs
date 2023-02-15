@@ -1,15 +1,17 @@
 <%- include ("partials/header") -%>
 	<div class="section home" data-name="home">
 		<div class="writting">
-			<div class="title">HANDCRAFTED FIBERGLASS POTS FOR TIMELESS DURABILITY</div>
-			<div class="text">Fiberglass is a material made of very fine fibers of glass, used in the construction of boats, automobiles, marine and aerospace. It has superb weight to strenght ratio and resistance to all weather conditions.</div>
-			<div class="buttonsWrap">
-				<div class="button black" onclick="scrollDirectlyToSection(9)">
-					LET'S TALK
+			<div class="contents" style="transform-origin: left center;">
+				<div class="title">HANDCRAFTED FIBERGLASS POTS FOR TIMELESS DURABILITY</div>
+				<div class="text">Fiberglass is a material made of very fine fibers of glass, used in the construction of boats, automobiles, marine and aerospace. It has superb weight to strenght ratio and resistance to all weather conditions.</div>
+				<div class="buttonsWrap">
+					<div class="button black" onclick="scrollDirectlyToSection(9)">
+						LET'S TALK
+					</div>
+					<div class="button" onclick="scrollDirectlyToSection(4)">
+						EXPLORE
+					</div> 
 				</div>
-				<div class="button" onclick="scrollDirectlyToSection(4)">
-					EXPLORE
-				</div> 
 			</div>
 		</div>
 		<%- include("partials/scrollIndicator") -%>
@@ -75,20 +77,23 @@
 		</div>
 	</div>
 	<div class="section arrivals" id="swipe-area" data-name="products">
-		<div id="arriving-products" style="left:0px;">
-			<div class="item" data-active="1" style="background-image:url(/images/new-arrival-1.png)">
-				<div class="arrivalTitle">
-					<div class="title">TARA<br>COLLECTION</div>
-					<div class="button">AVAILABLE IN APRIL</div>
+		<div class="contents" style="transform-origin: center bottom;">
+			<div id="arriving-products" style="left:0px;">
+				<div class="item" data-active="1" style="background-image:url(/images/new-arrival-1.png)">
+					<div class="arrivalTitle">
+						<div class="title">TARA<br>COLLECTION</div>
+						<div class="button">AVAILABLE IN APRIL</div>
+					</div>
 				</div>
-			</div>
-			<div class="item" style="background-image:url(/images/new-arrival-2.png)">
-				<div class="arrivalTitle">
-					<div class="title">QUADRO<br>COLLECTION</div>
-					<div class="button">AVAILABLE IN JUNE</div>
+				<div class="item" style="background-image:url(/images/new-arrival-2.png)">
+					<div class="arrivalTitle">
+						<div class="title">QUADRO<br>COLLECTION</div>
+						<div class="button">AVAILABLE IN JUNE</div>
+					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
+		
 		<script>
 			function handleTouchStart2(evt) {
 			    const firstTouch = getTouches(evt)[0];                                      
@@ -186,7 +191,7 @@
 			<div class="title">WHY CHOOSE FIBERGLASS PLANTERS?</div>
 			<div class="text">Although the pot has a simple role, the characteristics it should fulfill are very demanding. Strength, resistance to weather conditions and design (shape and finish) are key element when choosing pots. Whether it is used outdoors or indoors, it is essential that the pot must be strong so that it does not bend and deform under the influence of soil and root pressure. Additionally, the most demanding, probably the most important quality feature and the one that makes the biggest difference is weather, water and moisture resistance.</div>
 			<div class="buttonWrap">
-				<div class="button">FIND MORE</div>
+				<div class="button" onclick="window.location.href='/whyfiberglass'">FIND MORE</div>
 			</div>
 			<div class="plantersWrap">
 				<div class="planter">

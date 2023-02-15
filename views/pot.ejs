@@ -79,6 +79,11 @@
 								textWrap.setAttribute("class","textWrap");
 
 									var item = document.createElement("DIV");
+									item.setAttribute("class","title");
+									item.innerHTML = pot.items[i].name.replace(/-/," ");
+									textWrap.appendChild(item);
+
+									var item = document.createElement("DIV");
 									item.setAttribute("class","subTitle");
 									item.innerHTML = pot.items[i].type;
 									textWrap.appendChild(item);
@@ -88,10 +93,8 @@
 									item.innerHTML = "&euro;"+pot.items[i].vatprice+" (&euro;"+pot.items[i].price+" <span class=\"small\">excl. VAT - prices from stock</span>)";
 									textWrap.appendChild(item);
 
-
 									var item = document.createElement("DIV");
-									item.setAttribute("class","title");
-									item.innerHTML = pot.items[i].name.replace(/-/," ");
+									item.setAttribute("class","spacer");
 									textWrap.appendChild(item);
 
 									var item = document.createElement("DIV");
@@ -112,7 +115,7 @@
 									for(var j=0;j<attributes.length;j++){
 										var item = document.createElement("DIV");
 										item.setAttribute("class","text");
-										item.innerHTML = "<span class=\"bold\">"+attributes[j].charAt(0).toUpperCase() + attributes[j].slice(1)+"</span> " + pot.items[i].attributes[attributes[j]];
+										item.innerHTML = "<span class=\"bold\">"+attributes[j].charAt(0).toUpperCase() + attributes[j].slice(1)+":</span> " + pot.items[i].attributes[attributes[j]];
 										textWrap.appendChild(item);
 									}
 
@@ -222,51 +225,63 @@
 						textWrap.setAttribute("class","textWrap");
 
 							var item = document.createElement("DIV");
-							item.setAttribute("class","subTitle");
-							item.innerHTML = pot.items[i].type;
-							textWrap.appendChild(item);
-
-							var item = document.createElement("DIV");
-							item.setAttribute("class","subTitle");
-							item.innerHTML = "&euro;"+pot.items[i].vatprice+" (&euro;"+pot.items[i].price+" <span class=\"small\">excl. VAT - prices from stock</span>)";
-							textWrap.appendChild(item);
-
-
-							var item = document.createElement("DIV");
 							item.setAttribute("class","title");
 							item.innerHTML = pot.items[i].name.replace(/-/," ");
 							textWrap.appendChild(item);
 
 							var item = document.createElement("DIV");
-							item.setAttribute("class","text");
-							item.innerHTML	=	"Dimension";
+							item.setAttribute("class","subTitle");
+							item.innerHTML = pot.items[i].type;
 							textWrap.appendChild(item);
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","text");
-							item.innerHTML	=	pot.items[i].dimension;
-							textWrap.appendChild(item);
+							var inlines	=	document.createElement("DIV");
+							inlines.setAttribute("class","inlines")
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","smallestSpacer");
-							textWrap.appendChild(item);
-
-							var attributes = Object.keys(pot.items[i].attributes);
-							for(var j=0;j<attributes.length;j++){
 								var item = document.createElement("DIV");
-								item.setAttribute("class","text");
-								item.innerHTML = "<span class=\"bold\">"+attributes[j].charAt(0).toUpperCase() + attributes[j].slice(1)+"</span> " + pot.items[i].attributes[attributes[j]];
-								textWrap.appendChild(item);
-							}
+								item.setAttribute("class","inline");
+									var title = document.createElement("DIV");
+									title.setAttribute("class","itemTitle");
+									title.innerHTML	=	"Dimensions"
+									item.appendChild(title);
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","smallSpacer");
-							textWrap.appendChild(item);
+									var contents = document.createElement("DIV");
+									contents.setAttribute("class","itemContents");
+										var contentItem = document.createElement("DIV");
+										contentItem.setAttribute("class","contentItem");
+										contentItem.innerHTML	=	"<span class=\"bold\">Diam.</span><br>"+pot.items[i].diameter;
+										contents.appendChild(contentItem);
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","smallText");
-							item.innerHTML = "Handmade in Belgrade";
-							textWrap.appendChild(item);
+										var contentItem = document.createElement("DIV");
+										contentItem.setAttribute("class","contentItem");
+										contentItem.innerHTML	=	"<span class=\"bold\">Height</span><br>"+pot.items[i].height;
+										contents.appendChild(contentItem);
+
+										if(pot.items[i].length){
+											var contentItem = document.createElement("DIV");
+											contentItem.setAttribute("class","contentItem");
+											contentItem.innerHTML	=	"<span class=\"bold\">Length</span><br>"+pot.items[i].length;
+											contents.appendChild(contentItem);
+										}
+										
+									item.appendChild(contents);
+								inlines.appendChild(item);
+
+								var attributes = Object.keys(pot.items[i].attributes);
+								for(var j=0;j<attributes.length;j++){
+									if(attributes[j]!="type"){
+										var item = document.createElement("DIV");
+										item.setAttribute("class","inline");
+										item.innerHTML = "<span class=\"bold\">"+attributes[j].charAt(0).toUpperCase() + attributes[j].slice(1)+"</span><br>" + pot.items[i].attributes[attributes[j]];
+										inlines.appendChild(item);
+									}
+								}
+
+							textWrap.appendChild(inlines);
+
+							var price = document.createElement("DIV");
+							price.setAttribute("class","price");
+							price.innerHTML = "&euro; "+pot.items[i].price+" <span class=\"small\">excl. VAT</span>"
+							textWrap.appendChild(price);
 
 						responsiveElem.getElementsByClassName("textsWrap")[0].appendChild(textWrap);
 					}
@@ -282,7 +297,7 @@
 								var image = document.createElement("DIV");
 								image.setAttribute("class","image");
 									var img = document.createElement("IMG");
-									img.setAttribute("src","/pots/"+pot.type+"/"+pot.items[i].name+".PNG");
+									img.setAttribute("src","/pots/"+pot.type+"/responsive/"+pot.items[i].name+".PNG");
 									image.appendChild(img)
 								slide.appendChild(image);
 							responsiveElem.getElementsByClassName("slides")[0].appendChild(slide);
@@ -328,8 +343,8 @@
 					}
 
 					if(index>=0){
-						responsiveElem.getElementsByClassName("slides")[0].style.left=eval(index*100*-1)+"vw";
-						responsiveElem.getElementsByClassName("textsWrap")[0].style.left=eval(index*100*-1)+"vw";
+						responsiveElem.getElementsByClassName("slides")[0].style.left=eval(index*100*1.5*-1)+"vw";
+						responsiveElem.getElementsByClassName("textsWrap")[0].style.left=eval(index*100*1.5*-1)+"vw";
 						var dots = responsiveElem.getElementsByClassName("dots")[0].getElementsByClassName("dot");
 						for(var i=0;i<dots.length;i++){
 							dots[i].classList.remove("dotActive");
