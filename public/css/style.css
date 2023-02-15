@@ -1444,7 +1444,7 @@ input[type=number] {
     
 
 .pot .responsive .images .slides{
-    width:1000vw;
+    width:2000vw;
     font-size:0px;
     position:relative;
     z-index:110;
@@ -1468,7 +1468,7 @@ input[type=number] {
 }
 
 .pot .responsive .textsWrap{
-    width:1000vw;
+    width:2000vw;
     font-size:0px;
     position:relative;
     -webkit-transition: all ease 1s;

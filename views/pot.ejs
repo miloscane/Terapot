@@ -248,7 +248,12 @@
 									contents.setAttribute("class","itemContents");
 										var contentItem = document.createElement("DIV");
 										contentItem.setAttribute("class","contentItem");
-										contentItem.innerHTML	=	"<span class=\"bold\">Diam.</span><br>"+pot.items[i].diameter;
+										if(pot.items[i].diameter){
+											contentItem.innerHTML	=	"<span class=\"bold\">Diam.</span><br>"+pot.items[i].diameter;
+										}else if(pot.items[i].width){
+											contentItem.innerHTML	=	"<span class=\"bold\">Width</span><br>"+pot.items[i].width;
+										}
+										
 										contents.appendChild(contentItem);
 
 										var contentItem = document.createElement("DIV");
