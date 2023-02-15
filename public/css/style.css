@@ -2372,7 +2372,7 @@ input[type=number] {
     }
     .arrivals #arriving-products .item{
         background-size:100%;
-        background-position:center center;
+        background-position:center 0%;
     }
     .vision .text{
         font-size:26px;
@@ -2567,7 +2567,7 @@ input[type=number] {
     }
 }
 
-@media screen and (orientation:landscape) {
+@media screen and ( max-height: 450px ) {
     .diagram2 .rImage{
         display:none;
     }
@@ -2625,6 +2625,20 @@ input[type=number] {
 
     .pot .buttonsWrap{
         margin-top:0px;
+    }
+
+    .arrivals .navigation .item {
+        width: 30px;
+        margin: 0 10px;
+    }
+
+    .arrivals .navigation{
+        bottom:20px;
+    }
+
+    .arrivals #arriving-products .item{
+        background-size: 50% auto;
+        background-position:center bottom;
     }
     
 }
