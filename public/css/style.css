@@ -1514,33 +1514,47 @@ input[type=number] {
     font-size:12px;
     width:100vw;
     display:inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     position: relative;
     margin-right:50vw;
+}
+
+.pot .responsive .textsWrap .textWrap .titleWrap{
+    display:inline-block;
+    vertical-align: middle;
+    width:35%;
+}
+
+.pot .responsive .textsWrap .textWrap .inlines{
+    display:inline-block;
+    vertical-align: middle;
+    width:65%;
 }
 
 .pot .responsive .textWrap .title{
     font-weight:500;
     font-size:10vw;
-    text-align:center;
+    text-align:left;
+    padding-left:2vw;
 }
 
 .pot .responsive .textWrap .subTitle{
     font-weight:100;
     font-size:4vw;
-    text-align:center;
+    text-align:left;
+    padding-left:2vw;
 }
 
 .pot .responsive .textsWrap .textWrap .inlines{
-    font-weight:0;
+    font-size:0;
 }
 
 .pot .responsive .textsWrap .textWrap .inlines .inline{
     vertical-align: bottom;
     display:inline-block;
     text-align:center;
-    width:20%;
-    margin-bottom:5px;
+    width:33%;
+    margin-top:5px;
 }
 
 
@@ -1560,11 +1574,11 @@ input[type=number] {
 
 .pot .responsive .textsWrap .textWrap .price{
     font-weight:300;
-    font-size:2vw;
+    font-size:4vw;
     color:rgb(94,94,94);
     background-color: rgb(183,183,183);
-    padding:3px;
-    border-radius:0px 0px 4px 4px;
+    padding:1vw;
+    border-radius:0px 0px 1vw 1vw;
 }
 
 
@@ -1588,7 +1602,7 @@ input[type=number] {
 }
 
 .pot .responsive .textWrap .inline{
-    font-size:2.5vw;
+    font-size:2.9vw;
     font-weight:100;
 }
 
@@ -2655,7 +2669,7 @@ input[type=number] {
     }
 
     .pot .responsive .textWrap .title{
-        font-size:6vw;
+        font-size:6.8vw;
     }
 
     .pot .responsive .textWrap .subTitle{
@@ -2736,6 +2750,10 @@ input[type=number] {
 
     .diagramsWrap{
         margin-top:30px;
+    }
+
+    .contact .logosWrap{
+        padding-top:10px;
     }
 
 }
@@ -2889,6 +2907,11 @@ input[type=number] {
         -ms-transform: translate(0%,0%);
         -o-transform: translate(0%,0%);
         transform: translate(0%,0%);
+        top:0;
+    }
+
+    .home .writting .contents{
+        transform-origin: left top !important;
     }
 
     .home .writting .text{
@@ -2923,6 +2946,25 @@ input[type=number] {
 
     #pot-image-phone{
         display: none !important;
+    }
+
+    .products .product{
+        height:auto;
+    }
+
+    .products .product .image{
+        position:relative;
+        top:auto;
+        left:auto;
+        -webkit-transform: translate(0%,0%);
+        -moz-transform: translate(0%,0%);
+        -ms-transform: translate(0%,0%);
+        -o-transform: translate(0%,0%);
+        transform: translate(0%,0%);
+    }
+
+    #menu .logo{
+        width:60px;
     }
 }
 

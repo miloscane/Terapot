@@ -3,6 +3,21 @@
 	"type":"standard",
 	"items":[
 		{
+			"name":"CUSTOM-MADE",
+			"type":"Indoor/Outdoor Planter",
+			"vatprice":"930",
+			"price":"775",
+			"dimension":"<span class='bold'>Let us know</span>",
+			"length":"60cm",
+			"width":"60cm",
+			"height":"50cm",
+			"attributes":{
+				"type":"Interior/Exterior planter",
+				"material":"Fiberglass (GPR)",
+				"finish":"By request"
+			}
+		},
+		{
 			"name":"STANDARD-50x50",
 			"type":"Indoor/Outdoor Planter",
 			"vatprice":"360",
@@ -102,21 +117,6 @@
 				"finish":"By request",
 				"volume":"690l",
 				"weight":"23kg"
-			}
-		},
-		{
-			"name":"CUSTOM-MADE",
-			"type":"Indoor/Outdoor Planter",
-			"vatprice":"930",
-			"price":"775",
-			"dimension":"<span class='bold'>Let us know</span>",
-			"length":"60cm",
-			"width":"60cm",
-			"height":"50cm",
-			"attributes":{
-				"type":"Interior/Exterior planter",
-				"material":"Fiberglass (GPR)",
-				"finish":"By request"
 			}
 		}
 	]

@@ -224,52 +224,50 @@
 						var textWrap = document.createElement("DIV");
 						textWrap.setAttribute("class","textWrap");
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","title");
-							item.innerHTML = pot.items[i].name.replace(/-/," ");
-							textWrap.appendChild(item);
+							var titleWrap	=	document.createElement("DIV");
+							titleWrap.setAttribute("class","titleWrap");
+								var item = document.createElement("DIV");
+								item.setAttribute("class","title");
+								item.innerHTML = pot.items[i].name.replace(/-/," ");
+								titleWrap.appendChild(item);
 
-							var item = document.createElement("DIV");
-							item.setAttribute("class","subTitle");
-							item.innerHTML = pot.items[i].type;
-							textWrap.appendChild(item);
+								var item = document.createElement("DIV");
+								item.setAttribute("class","subTitle");
+								item.innerHTML = pot.items[i].type;
+								titleWrap.appendChild(item);
+							textWrap.appendChild(titleWrap);
 
 							var inlines	=	document.createElement("DIV");
 							inlines.setAttribute("class","inlines")
 
-								var item = document.createElement("DIV");
-								item.setAttribute("class","inline");
-									var title = document.createElement("DIV");
-									title.setAttribute("class","itemTitle");
-									title.innerHTML	=	"Dimensions"
-									item.appendChild(title);
 
-									var contents = document.createElement("DIV");
-									contents.setAttribute("class","itemContents");
-										var contentItem = document.createElement("DIV");
-										contentItem.setAttribute("class","contentItem");
-										if(pot.items[i].diameter){
-											contentItem.innerHTML	=	"<span class=\"bold\">Diam.</span><br>"+pot.items[i].diameter;
-										}else if(pot.items[i].width){
-											contentItem.innerHTML	=	"<span class=\"bold\">Width</span><br>"+pot.items[i].width;
-										}
-										
-										contents.appendChild(contentItem);
+								if(pot.items[i].diameter){
+									var item = document.createElement("DIV");
+									item.setAttribute("class","inline");
+									item.innerHTML = "<span class=\"bold\">Diameter</span><br>" + pot.items[i].diameter;
+									inlines.appendChild(item);
+								}
 
-										var contentItem = document.createElement("DIV");
-										contentItem.setAttribute("class","contentItem");
-										contentItem.innerHTML	=	"<span class=\"bold\">Height</span><br>"+pot.items[i].height;
-										contents.appendChild(contentItem);
+								if(pot.items[i].width){
+									var item = document.createElement("DIV");
+									item.setAttribute("class","inline");
+									item.innerHTML = "<span class=\"bold\">Width</span><br>" + pot.items[i].width;
+									inlines.appendChild(item);
+								}
 
-										if(pot.items[i].length){
-											var contentItem = document.createElement("DIV");
-											contentItem.setAttribute("class","contentItem");
-											contentItem.innerHTML	=	"<span class=\"bold\">Length</span><br>"+pot.items[i].length;
-											contents.appendChild(contentItem);
-										}
-										
-									item.appendChild(contents);
-								inlines.appendChild(item);
+								if(pot.items[i].height){
+									var item = document.createElement("DIV");
+									item.setAttribute("class","inline");
+									item.innerHTML = "<span class=\"bold\">Height</span><br>" + pot.items[i].height;
+									inlines.appendChild(item);
+								}
+
+								if(pot.items[i].length){
+									var item = document.createElement("DIV");
+									item.setAttribute("class","inline");
+									item.innerHTML = "<span class=\"bold\">Length</span><br>" + pot.items[i].length;
+									inlines.appendChild(item);
+								}
 
 								var attributes = Object.keys(pot.items[i].attributes);
 								for(var j=0;j<attributes.length;j++){
