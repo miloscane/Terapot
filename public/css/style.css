@@ -2894,6 +2894,36 @@ input[type=number] {
     .home .writting .text{
         margin-bottom:30px;
     }
+    .diagram2 .rImage{
+        display: none;
+    }
+    .diagram2 .image{
+        display: block;
+    }
+
+    .diagram2 .image{
+        height:auto;
+    }
+
+    .diagram2 .image .main{
+        position:relative;
+    }
+
+    .arrivals .image{
+        display:block;
+    }
+
+    .arrivals .responsive{
+        display:none;
+    }
+
+    #pot-image{
+        display: block;
+    }
+
+    #pot-image-phone{
+        display: none !important;
+    }
 }
 
 
