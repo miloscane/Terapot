@@ -1,9 +1,4 @@
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
-});
+
 
 var timeoutActive = false;
 var timeOutTime   = 1000;
@@ -93,8 +88,10 @@ for(var i=0;i<sections.length;i++){
 }
 sections[0].dataset.active=1;
 
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
 function scrollToSection(direction){
-  if(!timeoutActive){
+  if(!timeoutActive && vw>959){
     var sectionIndex = -1
     for(var i=0;i<sections.length;i++){
       if(Number(sections[i].dataset.active) == 1){
@@ -182,7 +179,12 @@ function menuScrollToSection(elem){
     }
   }
   if(sectionNum>=0){
-    scrollDirectlyToSection(sectionNum);
+    if(vw<959){
+      window.scrollTo(0, sections[sectionNum].getBoundingClientRect().top - window.pageYOffset);
+    }else{
+      scrollDirectlyToSection(sectionNum);
+    }
+    
   }else{
     if(elem.dataset.sectionnum){
       window.location.href = "/#sectionnum="+elem.dataset.sectionnum
@@ -198,6 +200,28 @@ if(urlArray.length>1){
   var activeSection = Number(urlArray[1].split("sectionnum=")[1])
   if(!isNaN(activeSection)){
     scrollDirectlyToSection(activeSection)
+  }
+  if(vw<959){
+    window.scrollTo(0, sections[activeSection].getBoundingClientRect().top);
+  }
+}
+
+function scrolled(){
+  if(vw<959){
+    var scrollPosition = window.pageYOffset;
+    if(scrollPosition>10){
+      document.getElementById("menu").classList.add("whiteMenu");
+    }else{
+      document.getElementById("menu").classList.remove("whiteMenu");
+    }
+    for(var i=0;i<sections.length;i++){
+      var sectionBox  = sections[i].getBoundingClientRect();
+      if(sectionBox.top<100*vh && sections[i].dataset.animationclassname){
+        sections[i].classList.add(sections[i].dataset.animationclassname);
+      }else if(sectionBox.top<100*vh && sections[i].dataset.removeanimationclassname){
+        sections[i].classList.remove(sections[i].dataset.removeanimationclassname);
+      }
+    }
   }
 }
 

@@ -2,7 +2,7 @@ var screenHeight 	=	100*vh-70;
 for(var i=0;i<sections.length;i++){
 	var scalingElem = sections[i].getElementsByClassName("contents")[0];
 	var offset = 0;
-	if(scalingElem){
+	if(scalingElem && vw>959){
 		if(scalingElem.dataset.offset){
 			offset = Number(scalingElem.dataset.offset)
 		}

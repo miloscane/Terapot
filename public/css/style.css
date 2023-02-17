@@ -459,6 +459,10 @@ input[type=number] {
     font-size:0;
 }
 
+#site-wrap .products{
+    padding-top:5px !important;
+}
+
 .products .product{
     font-size:20px;
     width:50%;
@@ -468,6 +472,7 @@ input[type=number] {
     vertical-align: bottom;
     position:relative;
     background-color:rgb(33,32,34);
+    overflow:hidden;
 }
 
 .products .product .background{
@@ -519,9 +524,11 @@ input[type=number] {
 }
 
 .arrivals{
-    background-size:cover;
-    background-image:url(/images/arrivals.jpg);
-    background-position:center bottom;
+    background: linear-gradient(180deg, rgba(20,19,17,1) 0%, rgba(32,31,29,1) 100%);
+}
+
+.arrivals .responsive{
+    display:none;
 }
 
 
@@ -543,8 +550,7 @@ input[type=number] {
     text-align:center;
     display:inline-block;
     vertical-align: middle;
-    background-position:center bottom;
-    background-repeat: no-repeat;
+    position:relative;
 }
 
 .arrivals .navigation{
@@ -1081,6 +1087,8 @@ input[type=number] {
 .contactItemsSection{
     text-align:center;
     background-color:rgb(0,0,0);
+    position:relative;
+    z-index:30000;
 }
 
 .contactItemsSection .text:first-child{
@@ -1247,10 +1255,10 @@ input[type=number] {
 .pot .buttonsWrap .button{
     display:inline-block;
     vertical-align: middle;
-    margin:30px 60px;
+    width:12%;
+    margin:0.5%;
     border:2px solid rgb(0,0,0);
     padding:10px 0;
-    width:150px;
     border-radius:100px;
     cursor:pointer;
     -webkit-transition: all ease 0.5s;
@@ -1260,6 +1268,7 @@ input[type=number] {
     transition: all ease 0.5s;
     background-color:rgba(0,0,0,0);
     color:rgb(0,0,0);
+    font-size:1vw;
 }
 
 .pot .buttonsWrap .buttonActive{
@@ -1601,9 +1610,9 @@ input[type=number] {
 }
 
 .pot .responsive .dots .dot{
-    margin:2vw;
-    width:5vw;
-    height:1vw;
+    margin:1vw;
+    width:2.5vw;
+    height:0.5vw;
     border-radius:3px;
     background-color:rgb(188,188,188);
     display:inline-block;
@@ -2077,78 +2086,48 @@ input[type=number] {
 
 @media screen and (max-width: 959px) {
 
+    body{
+        overflow-y:scroll;
+    }
+
+    #site-wrap{
+        position:relative;
+        top:0 !important;
+    }
+
+    .section{
+        overflow-y:visible;
+        height:auto;
+        max-height:none;
+        min-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .paddedForMenu{
+        padding-top:0px !important;
+    }
+
     #menu{
         padding-top:20px;
     }
 
     .fiberglass .title{
-        padding-top:20px;
+        padding-top:70px;
     }
 
     .home .writting{
         width:70%;
     }
 
-    .products{
-        padding-top:60px !important;
-    }
-    .products .product{
-        display:block;
-        width:100%;
-        height: calc(50vh - 35px);
-        height: calc(var(--vh, 1vh) * 50 - 35px);
-        margin:5px auto;
-    }
-
-    .products .product .background{
-        width:100%;
-    }
-
-    .products .product:first-child .image{
-        bottom:0;
-        top:auto;
-        -webkit-transform: translate(-50%,0%);
-        -moz-transform: translate(-50%,0%);
-        -ms-transform: translate(-50%,0%);
-        -o-transform: translate(-50%,0%);
-        transform: translate(-50%,0%);
-    }
-
-    .products .product:first-child .text{
-        bottom:0;
-        top:auto;
-        -webkit-transform: translate(-50%,0%);
-        -moz-transform: translate(-50%,0%);
-        -ms-transform: translate(-50%,0%);
-        -o-transform: translate(-50%,0%);
-        transform: translate(-50%,0%);
-    }
-
-    .products .product .image{
-        max-height:calc(50vh - 30px);
-    }
-
-
-    .products .product .image img{
-        max-height:calc(50vh - 30px);
-        max-height: calc(var(--vh, 1vh) * 50 - 30px);
-        width:auto;
-        display:block;
-        margin:0 auto;
-    }
-
-    .products .product .text{
-        max-height:calc(50vh - 30px);
-        max-height: calc(var(--vh, 1vh) * 50 - 30px);
-        opacity:1;
-    }
-
-
-    .products .product .text img{
-        max-height:calc(50vh - 30px);
-        max-height: calc(var(--vh, 1vh) * 50 - 30px);
-        display:block;
-        margin:0 auto;
+    .diagramsWrap{
+        margin-top:0px;
+        position:relative;
+        top:0%;
+        -webkit-transform:translate(0%,0%);
+        -moz-transform:translate(0%,0%);
+        -ms-transform:translate(0%,0%);
+        -o-transform:translate(0%,0%);
+        transform:translate(0%,0%);
+        padding-top:70px;
     }
 
 
@@ -2182,8 +2161,8 @@ input[type=number] {
     .products .product:hover .overlay{
         opacity:0;
     }
-    .products .product .rText{
-        display: block;
+    .products .product .text{
+        opacity:1 !important;
     }
 
 
@@ -2221,8 +2200,17 @@ input[type=number] {
         display:none;
     }
 
+    #site-wrap .diagram2{
+        min-height: 0;
+        padding-top:70px !important;
+    }
+
     .diagram2 .rImage{
         display:block;
+        height:auto;
+    }
+    .diagram2 .rImage .main{
+        position:relative;
     }
 
     .diagram2 .image{
@@ -2239,6 +2227,11 @@ input[type=number] {
 
     .whyFiberTextPhoto .photoText .text{
         width:80%;
+    }
+
+    .photoTextSideBySide{
+        min-height: 0;
+        padding-top:70px !important;
     }
 
     .photoTextSideBySide .photo{
@@ -2303,13 +2296,20 @@ input[type=number] {
         display:none;
     }
 
-    .pot .nonResponsive{
+    .pot .buttonsWrap{
         display:none;
     }
 
-    .pot .responsive{
-        display:block;
+    .pot .nonResponsive .manImage{
+        max-width:150%;
+        width:150%;
+        margin-left:-20%;
     }
+
+    .pot .product .slides .slide{
+        vertical-align: bottom;
+    }
+    
     .pot .responsive .textWrap .title{
         font-size:36px;
     }
@@ -2349,17 +2349,94 @@ input[type=number] {
         top:0;
     }
 
-    .products{
-        background:rgb(230,230,230);
-        background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(230,230,230,1) 31%, rgba(32,32,32,1) 44%);
+    .contact .lighterDark .title{
+        padding:20px 0;
+        padding-top:70px;
     }
+
+    .pot .product .arrowLeft{
+        left:10px;
+    }
+
+    .pot .product .arrowRight{
+        right:10px;
+    }
+
+    .vision .text{
+        position:relative;
+        width:80%;
+        top:auto;
+        left: auto;
+        -webkit-transform: translate(0%,0%);
+        -moz-transform: translate(0%,0%);
+        -ms-transform: translate(0%,0%);
+        -o-transform: translate(0%,0%);
+        transform: translate(0%,0%);
+    }
+
+    .vision{
+        min-height:0;
+        padding:70px 0 !important;
+    }
+
+    .fiberglass{
+        min-height: 0;
+    }
+
+    .diagrams{
+        min-height: 0;
+    }
+
+    .arrivals{
+        min-height: 0;
+    }
+
+    .contact{
+        min-height: 0;
+    }
+
+    .whyFiberTextPhoto{
+        min-height: 0;
+    }
+
+    .materials{
+        min-height: 0;
+        padding:70px 0;
+    }
+
+    .textByText{
+        min-height: 0;
+        padding:70px 0;
+    }
+
+    .arrivals #arriving-products .item{
+        height: auto;
+    }
+
+    .arrivals .navigation{
+        bottom:30px;
+    }
+
+    .arrivals .responsive{
+        display:block;
+        width:100%;
+
+    }
+
+    .arrivals .image{
+        display:none;
+    }
+
+    .contactItemsSection .text:first-child{
+        padding-top:10px;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
 
     .home .writting{
         top:80px;
-        width:90%;
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -2397,10 +2474,67 @@ input[type=number] {
         text-align:center;
         border:1px solid rgb(0,0,0);
     }
-    .arrivals #arriving-products .item{
-        background-size:100%;
-        background-position:center bottom;
+
+    .products .product{
+        display:block;
+        width:100%;
+        height: calc(50vh);
+        height: calc(var(--vh, 1vh) * 50);
+        margin:5px auto;
+        margin-top:0px;
     }
+
+    .products .product .background{
+        width:100%;
+    }
+
+    .products .product:first-child .image{
+        bottom:0;
+        top:auto;
+        -webkit-transform: translate(-50%,0%);
+        -moz-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+        -o-transform: translate(-50%,0%);
+        transform: translate(-50%,0%);
+    }
+
+    .products .product:first-child .text{
+        bottom:0;
+        top:auto;
+        -webkit-transform: translate(-50%,0%);
+        -moz-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+        -o-transform: translate(-50%,0%);
+        transform: translate(-50%,0%);
+    }
+
+    .products .product .image{
+        max-height:calc(50vh);
+    }
+
+
+    .products .product .image img{
+        max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50);
+        width:auto;
+        display:block;
+        margin:0 auto;
+    }
+
+    .products .product .text{
+        max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50);
+        opacity:1;
+    }
+
+
+    .products .product .text img{
+        max-height:calc(50vh - 30px);
+        max-height: calc(var(--vh, 1vh) * 50);
+        display:block;
+        margin:0 auto;
+    }
+
     .vision .text{
         font-size:26px;
         line-height: 36px;
@@ -2431,9 +2565,6 @@ input[type=number] {
     .contact .contactWrap .inline .wrap .text{
         margin-top:10px;
     }
-    .contact .lighterDark .title{
-        margin-bottom:2px;
-    }
 
     .fiberglass .buttonWrap .button{
         font-size:16px;
@@ -2457,9 +2588,6 @@ input[type=number] {
 
     .fiberglass .text{
         width:90%;
-    }
-    .contact .lighterDark .title{
-        padding:20px 0;
     }
     .diagrams .diagram{
         margin-bottom:20px;
@@ -2517,6 +2645,14 @@ input[type=number] {
         bottom:10px;
     }
 
+    .pot .nonResponsive{
+        display:none;
+    }
+
+    .pot .responsive{
+        display:block;
+    }
+
     .pot .responsive .textWrap .title{
         font-size:6vw;
     }
@@ -2542,6 +2678,14 @@ input[type=number] {
     }
 
     #site-wrap .textByText{
+        padding-top:70px !important;
+    }
+
+    .pot .product .arrow{
+        display: none;
+    }
+
+    #site-wrap .pot{
         padding-top:70px !important;
     }
 
@@ -2593,13 +2737,9 @@ input[type=number] {
         margin-top:30px;
     }
 
-    .arrivals #arriving-products .item{
-        background-size:100%;
-        background-position:center 20%;
-    }
 }
 
-@media screen and ( max-height: 450px ) {
+/*@media screen and ( max-height: 450px ) {
     .diagram2 .rImage{
         display:none;
     }
@@ -2735,12 +2875,25 @@ input[type=number] {
         -o-transform:scale(0.7);
         transform:scale(0.7);
     }
+}*/
 
-    .pot .buttonsWrap .button{
-        margin:5px;
+@media screen and ( max-height: 550px ) {
+
+    .home .writting{
+        position:relative;
+        margin-top:70px;
+        padding-bottom:20px;
+        -webkit-transform: translate(0%,0%);
+        -moz-transform: translate(0%,0%);
+        -ms-transform: translate(0%,0%);
+        -o-transform: translate(0%,0%);
+        transform: translate(0%,0%);
+    }
+
+    .home .writting .text{
+        margin-bottom:30px;
     }
 }
-
 
 
 
