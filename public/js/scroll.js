@@ -180,7 +180,8 @@ function menuScrollToSection(elem){
   }
   if(sectionNum>=0){
     if(vw<959){
-      window.scrollTo(0, sections[sectionNum].getBoundingClientRect().top - window.pageYOffset);
+      //window.scrollTo(0, sections[sectionNum].getBoundingClientRect().top);
+      sections[sectionNum].scrollIntoView(true)
     }else{
       scrollDirectlyToSection(sectionNum);
     }
@@ -202,7 +203,8 @@ if(urlArray.length>1){
     scrollDirectlyToSection(activeSection)
   }
   if(vw<959){
-    window.scrollTo(0, sections[activeSection].getBoundingClientRect().top);
+    //window.scrollTo(0, sections[activeSection].getBoundingClientRect().top);
+    sections[activeSection].scrollIntoView(true)
   }
 }
 
