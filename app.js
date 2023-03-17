@@ -37,17 +37,31 @@ server.get('/whyfiberglass',function(req,res){
 });
 
 
+server.use('/robots.txt', function (req, res, next) {
+    res.type('text/plain')
+    res.send("User-agent: *\nAllow: /");
+});
 
-
-
+server.get('/robots.txt', function (req, res, next) {
+    res.type('text/plain')
+    res.send("User-agent: *\nAllow: /");
+});
 
 
 server.get('/:pot',function(req,res){
-	res.render('pot',{
-		pot: JSON.parse(fs.readFileSync("./public/pots/"+req.params.pot+"/info.json")) 
-	});	
+	if(fs.existsSync("./public/pots/"+req.params.pot+"/info.json")){
+		res.render('pot',{
+			pot: JSON.parse(fs.readFileSync("./public/pots/"+req.params.pot+"/info.json")) 
+		});	
+	}else{
+		res.send("Neposotojeci link");
+	}
+	
 });
+
+
 
 server.get('*',function(req,res){
 	res.send("Neposotojeci link");	
 });
+
