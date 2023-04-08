@@ -55,15 +55,15 @@
 			"type":"Indoor/Outdoor Planter",
 			"vatprice":"546",
 			"price":"455",
-			"dimension":"<span class='bold'>Diameter:</span> 55cm &nbsp;&nbsp;&nbsp; <span class='bold'>Height:</span> 55cm",
-			"diameter":"55cm",
-			"height":"55cm",
+			"dimension":"<span class='bold'>Diameter:</span> 70cm &nbsp;&nbsp;&nbsp; <span class='bold'>Height:</span> 100cm",
+			"diameter":"70cm",
+			"height":"100cm",
 			"attributes":{
 				"type":"Interior/Exterior planter",
 				"material":"Fiberglass (GPR)",
 				"finish":"By request",
-				"volume":"105l",
-				"weight":"6.8kg"
+				"volume":"320l",
+				"weight":"14.5kg"
 			}
 		},
 		{
@@ -71,9 +71,9 @@
 			"type":"Indoor/Outdoor Planter",
 			"vatprice":"930",
 			"price":"775",
-			"dimension":"<span class='bold'>Diameter:</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>Height:</span> 120cm",
+			"dimension":"<span class='bold'>Diameter:</span> 90cm &nbsp;&nbsp;&nbsp; <span class='bold'>Height:</span> 125cm",
 			"diameter":"90cm",
-			"height":"120cm",
+			"height":"125cm",
 			"attributes":{
 				"type":"Interior/Exterior planter",
 				"material":"Fiberglass (GPR)",
