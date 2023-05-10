@@ -188,7 +188,12 @@ function menuScrollToSection(elem){
     
   }else{
     if(elem.dataset.sectionnum){
-      window.location.href = "/#sectionnum="+elem.dataset.sectionnum
+      if(window.location.href.includes(".eu/rs")){
+        window.location.href = "/rs/#sectionnum="+elem.dataset.sectionnum
+      }else{
+        window.location.href = "/#sectionnum="+elem.dataset.sectionnum
+      }
+      
     }
     
     console.log("Couldn't figure where to scroll based on name")
