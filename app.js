@@ -68,7 +68,7 @@ server.get('/:pot',function(req,res){
 
 server.get('/rs/:pot',function(req,res){
 	if(fs.existsSync("./public/potsrs/"+req.params.pot+"/info.json")){
-		res.render('pot',{
+		res.render('potrs',{
 			pot: JSON.parse(fs.readFileSync("./public/potsrs/"+req.params.pot+"/info.json")) 
 		});	
 	}else{
