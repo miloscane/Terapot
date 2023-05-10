@@ -9,9 +9,9 @@ scrollableElement.addEventListener('keydown', function(event){
   //up -> 38
   //donw ->v40
   if(event.keyCode==38){
-    scrollToSection(-1);
+    //scrollToSection(-1);
   }else if(event.keyCode==40){
-    scrollToSection(1);
+    //scrollToSection(1);
   }
 });
 
@@ -67,10 +67,10 @@ var yDown = null;
 function checkScrollDirection(event) {
   if (checkScrollDirectionIsUp(event)) {
     //console.log("Up");
-    scrollToSection(-1);
+    //scrollToSection(-1);
   } else {
     //console.log("Down")
-    scrollToSection(1);
+    //scrollToSection(1);
   }
 }
 
@@ -183,15 +183,16 @@ function menuScrollToSection(elem){
       //window.scrollTo(0, sections[sectionNum].getBoundingClientRect().top);
       sections[sectionNum].scrollIntoView(true)
     }else{
-      scrollDirectlyToSection(sectionNum);
+      //scrollDirectlyToSection(sectionNum);
+      sections[sectionNum].scrollIntoView(true)
     }
     
   }else{
     if(elem.dataset.sectionnum){
       if(window.location.href.includes(".eu/rs")){
-        window.location.href = "/rs/#sectionnum="+elem.dataset.sectionnum
+        //window.location.href = "/rs/#sectionnum="+elem.dataset.sectionnum
       }else{
-        window.location.href = "/#sectionnum="+elem.dataset.sectionnum
+        //window.location.href = "/#sectionnum="+elem.dataset.sectionnum
       }
       
     }
@@ -214,12 +215,26 @@ if(urlArray.length>1){
 }
 
 function scrolled(){
+  var scrollPosition = window.pageYOffset;
   if(vw<959){
-    var scrollPosition = window.pageYOffset;
     if(scrollPosition>10){
       document.getElementById("menu").classList.add("whiteMenu");
     }else{
       document.getElementById("menu").classList.remove("whiteMenu");
+    }
+    for(var i=0;i<sections.length;i++){
+      var sectionBox  = sections[i].getBoundingClientRect();
+      if(sectionBox.top<100*vh && sections[i].dataset.animationclassname){
+        sections[i].classList.add(sections[i].dataset.animationclassname);
+      }else if(sectionBox.top<100*vh && sections[i].dataset.removeanimationclassname){
+        sections[i].classList.remove(sections[i].dataset.removeanimationclassname);
+      }
+    }
+  }else{
+    if(scrollPosition<10){
+      document.getElementById("menu").classList.remove("whiteMenu");
+    }else{
+      document.getElementById("menu").classList.add("whiteMenu");
     }
     for(var i=0;i<sections.length;i++){
       var sectionBox  = sections[i].getBoundingClientRect();
