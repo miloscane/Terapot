@@ -32,8 +32,16 @@ server.get('/',function(req,res){
 	res.render('home',{});	
 });
 
+server.get('/rs',function(req,res){
+	res.render('homers',{});	
+});
+
 server.get('/whyfiberglass',function(req,res){
 	res.render('whyfiberglass',{});	
+});
+
+server.get('/rs/whyfiberglass',function(req,res){
+	res.render('whyfiberglassrs',{});	
 });
 
 
@@ -56,7 +64,16 @@ server.get('/:pot',function(req,res){
 	}else{
 		res.send("Neposotojeci link");
 	}
-	
+});
+
+server.get('/rs/:pot',function(req,res){
+	if(fs.existsSync("./public/potsrs/"+req.params.pot+"/info.json")){
+		res.render('pot',{
+			pot: JSON.parse(fs.readFileSync("./public/potsrs/"+req.params.pot+"/info.json")) 
+		});	
+	}else{
+		res.send("Neposotojeci link");
+	}
 });
 
 

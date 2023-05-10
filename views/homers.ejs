@@ -1,0 +1,297 @@
+<%- include ("partials/headerrs") -%>
+	<div class="section home" data-name="home">
+		<div class="writting">
+			<div class="contents" data-offset="30" style="transform-origin: left center;">
+				<div class="title">RUČNO RAĐENE FIBERGLASS SAKSIJE ZA VEČNU ISTRAJNOST</div>
+				<div class="text">Fiberglas je materijal napravljen od veoma finih staklenih vlakana, koji se koristi u izgradnji čamaca, automobila, brodova i vazduhoplovstva. Ima odličan odnos težine i čvrstoće i otpornost na sve vremenske uslove.</div>
+				<div class="buttonsWrap">
+					<div class="button black" onclick="scrollDirectlyToSection(10)">
+						PRIČAJMO
+					</div>
+					<div class="button" onclick="scrollDirectlyToSection(4)">
+						ISTRAŽI
+					</div> 
+				</div>
+			</div>
+		</div>
+		<%- include("partials/scrollIndicator") -%>
+	</div>
+	<div class="section products paddedForMenu" data-name="products">
+		<div class="product" onclick="window.location.href='/oblo'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/obloNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/obloNova.png">
+			</div>
+		</div>
+		<div class="product" onclick="window.location.href='/tara'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/taraNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/taraNova.png">
+			</div>
+		</div>
+	</div>
+	<div class="section products paddedForMenu" data-name="products">
+		<div class="product" onclick="window.location.href='/tisa'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/tisaNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/tisaNova.png">
+			</div>
+		</div>
+		<div class="product" onclick="window.location.href='/drina'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/drinaNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/drinaNova.png">
+			</div>
+		</div>
+	</div>
+	<div class="section products paddedForMenu" data-name="products">
+		<div class="product" onclick="window.location.href='/standard'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/standardNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/standardNova.png">
+			</div>
+		</div>
+		<div class="product" onclick="window.location.href='/round'">
+			<div class="background"></div>
+			<div class="text">
+				<img src="/images/roundNatpis.png">
+			</div>
+			<div class="image">
+				<img src="/images/roundNova.png">
+			</div>
+		</div>
+	</div>
+	<div class="section arrivals paddedForMenu" id="swipe-area" data-name="products">
+		<div id="arriving-products" style="left:0px;">
+			<div class="item" data-active="1">
+				<img src="/images/Terapot-New-Arrival-Tara.png" class="image">
+				<img src="/images/Terapot-New-Arrival-Tara-Phone.png" class="responsive">
+			</div>
+			<div class="item">
+				<img src="/images/Terapot-New-Arrival-Quadro.png" class="image">
+				<img src="/images/Terapot-New-Arrival-Quadro-Phone.png" class="responsive">
+			</div>
+		</div>	
+		
+		<script>
+			function handleTouchStart2(evt) {
+			    const firstTouch = getTouches(evt)[0];                                      
+			    xDown = firstTouch.clientX;                                      
+			    yDown = firstTouch.clientY;                                      
+			};                                                
+			                                                                         
+			function handleTouchMove2(evt) {
+			    if ( ! xDown || ! yDown ) {
+			        return;
+			    }
+
+			    var xUp = evt.touches[0].clientX;                                    
+			    var yUp = evt.touches[0].clientY;
+
+			    var xDiff = xDown - xUp;
+			    var yDiff = yDown - yUp;
+			                                                                         
+			    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+			        if ( xDiff > 0 ) {
+			            /* right swipe */ 
+			           scrollArrivals(1)
+			        } else {
+			            /* left swipe */
+			           scrollArrivals(-1)
+			        }                       
+			    } else {
+			        if ( yDiff > 0 ) {
+			            /* down swipe */ 
+			          scrollToSection(1);
+			        } else { 
+			            /* up swipe */
+			          scrollToSection(-1);
+			        }                                                                 
+			    }
+			    /* reset values */
+			    xDown = null;
+			    yDown = null;                                             
+			};
+			document.getElementById("swipe-area").addEventListener('touchstart', handleTouchStart2, false);        
+			document.getElementById("swipe-area").addEventListener('touchmove', handleTouchMove2, false);
+		</script>
+		
+		<div class="navigation">
+			<div class="item" onclick="scrollArrivals(-1)">
+				<img src="/icons/leftArrow.svg" width="50" class="white">
+				<img src="/icons/leftArrow-black.svg" width="50" class="black">
+			</div>
+			<div class="item" onclick="scrollArrivals(1)">
+				<img src="/icons/rightArrow.svg" width="50" class="white">
+				<img src="/icons/rightArrow-black.svg" width="50" class="black">
+			</div>
+			<script>
+				function scrollArrivals(direction){
+					var items	=	document.getElementById("arriving-products").getElementsByClassName("item");
+					var currentItemIndex	=	-1;
+					for(var i=0;i<items.length;i++){
+						if(Number(items[i].dataset.active)==1){
+							currentItemIndex	=	i;
+							break;
+						}
+					}
+					if(currentItemIndex>=0){
+						var newItemIndex	=	currentItemIndex + direction;
+						var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+						for(var i=0;i<items.length;i++){
+							items[i].dataset.active=0;
+						}
+						if(items[newItemIndex]){
+							
+							items[newItemIndex].dataset.active=1;
+							document.getElementById("arriving-products").style.left = Math.max(eval(-1*newItemIndex*vw),-1*newItemIndex*1920)+"px";
+						}else if(newItemIndex<=0){
+							items[items.length-1].dataset.active=1;
+							document.getElementById("arriving-products").style.left = Math.max(eval(-1*(items.length-1)*vw),-1*(items.length-1)*1920)+"px";
+						}else if(newItemIndex>=items.length-1){
+							items[0].dataset.active=1;
+							document.getElementById("arriving-products").style.left = Math.max(eval(-1*(0)*vw),-1*(0)*1920)+"px";
+						}else{
+							console.log(newItemIndex )
+						}
+					}else{
+						console.log("Couldnt figure out active element");
+					}
+				}
+			</script>
+		</div>
+	</div>
+	<div class="section vision" data-name="vision">
+			<div class="overlay"></div>
+			<div class="text">U Terapotu verujemo u san koji je pred nama. Naš nemilosrdni fokus na inovacije, luksuz i održivost vodi nas ka budućnosti u kojoj više ne morate da birate između toga da radite velike stvari i da radite pravu stvar.</div>
+	</div>
+	<div class="section fiberglass paddedForMenu" data-name="fiberglass">
+		<div class="contents">
+			<div class="title">ZAŠTO ODABRATI FIBERGLAS SAKSIJE_</div>
+			<div class="text">Iako saksija ima jednostavnu ulogu, karakteristike koje treba da ispuni su veoma zahtevne. Čvrstoća, otpornost na vremenske uslove i dizajn (oblik i završna obrada) su ključni elementi pri odabiru saksija. Bilo da se koristi na otvorenom ili u zatvorenom prostoru, neophodno je da saksija bude čvrsta kako se ne bi savijala i deformisala pod uticajem tla i pritiska korena. Pored toga, najzahtevnija, verovatno najvažnija karakteristika kvaliteta i ona koja čini najveću razliku je otpornost na vremenske uslove, vodu i vlagu.</div>
+			<div class="buttonWrap">
+				<div class="button" onclick="window.location.href='/whyfiberglass'">SAZNAJ VIŠE</div>
+			</div>
+			<div class="plantersWrap">
+				<div class="planter">
+					<div class="imageWrap" style="background-image:url(/images/woodenPlanters.jpg)"></div>
+					<div class="title">DRVENE SAKSIJE</div>
+				</div>
+				<div class="planter">
+					<div class="imageWrap" style="background-image:url(/images/concretePlanters.jpg)"></div>
+					<div class="title">BETONSKE SAKSIJE</div>
+				</div>
+				<div class="planter">
+					<div class="imageWrap" style="background-image:url(/images/metalPlanters.jpg)"></div>
+					<div class="title">METALNE SAKSIJE</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section diagrams paddedForMenu" data-name="diagrams">
+		<div class="diagramsWrap">
+			<div class="contents" style="transform-origin:center center">
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/frost.png">
+						</div>
+						<div class="title">OTPORNOST NA SMRZAVANJE</div>
+						<div class="text">Fiberglas se ne lomi ili ošteti kada je izložen niskim temperaturama zbog svojstava staklenih vlakana.</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/UV.png">
+						</div>
+						<div class="title">UV OTPORNOST</div>
+						<div class="text">Staklena vlakna ne apsorbuju UV zračenje, što ih čini pogodnim za spoljašnju upotrebu. kao i otporan na bledenje tokom vremena.</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/indoor.png">
+						</div>
+						<div class="title">SPREMNE ZA UNUTRAŠNJOST</div>
+						<div class="text">Saksije od fiberglasa se lako pomeraju i ne ostavljaju tragove na podu, dolaze u različitim bojama i stilovima, što ih čini pogodnim za različite tipove enterijera.</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/durability.png">
+						</div>
+						<div class="title">IZDRŽLJIVOST</div>
+						<div class="text">Fiberglas je jak, lagan materijal otporan na vremenske uslove i koroziju, što ga čini pogodnim materijalom za saksije za biljke.</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/strength.png">
+						</div>
+						<div class="title">SNAGA</div>
+						<div class="text">Fiberglass is known for its high strength-to-weight ratio. This means that it can support a large amount of weight for its size.</div>
+					</div>
+				</div>
+				<div class="diagram">
+					<div class="diagramContent">
+						<div class="icon">
+							<img src="/icons/lightness.png">
+						</div>
+						<div class="title">LAKOĆA</div>
+						<div class="text">Fiberglas je poznat po svom visokom odnosu čvrstoće i težine. To znači da može izdržati veliku težinu za svoju veličinu.</div>
+					</div>
+				</div>	
+			</div>
+				
+		</div>	
+		
+			
+	</div>
+	<div class="section paddedForMenu diagram2" data-name="diagram2" data-animationclassname="animatedDiagram2">
+		<div class="image">
+			<img src="/images/Terapot-Circular-PC.png" class="main">
+			<img src="/images/Terapot-Circular-PC-Lines.png" class="lines">
+		</div>
+		<div class="rImage">
+			<img src="/images/Terapot-Circular-Phone.png" class="main">
+			<img src="/images/Terapot-Circular-Phone-Lines.png" class="lines">
+		</div>
+		<div class="lImage">
+			<img src="/images/circularLandscapeDiagram.png?v=1.4" class="main">
+			<img src="/images/circularlandscapeDiagram-Lines.png?v=1.4" class="lines">
+		</div>	
+	</div>
+	<div class="section diagram2 paddedForMenu" data-name="diagram2" data-animationclassname="animatedDiagram2">
+		<div class="image">
+			<img src="/images/Terapot-Rectangular-PC.png" class="main">
+			<img src="/images/Terapot-Rectangular-PC-Lines.png" class="lines">
+		</div>
+		<div class="rImage">
+			<img src="/images/Terapot-Rectangular-Phone.png" class="main">
+			<img src="/images/Terapot-Rectangular-Phone-Lines.png" class="lines">
+		</div>	
+		<div class="lImage">
+			<img src="/images/rectangularLandscapeDiagram.png?v=1.4" class="main">
+			<img src="/images/rectangularLandscapeDiagram-Lines.png?v=1.4" class="lines">
+		</div>	
+	</div>
+<%- include ("partials/footerrs") -%>

@@ -5,6 +5,7 @@
 /public/logos
 /public/uploads
 /public/pots
+/public/potsrs
 **/.DS_Store
 .env
 /node_modules

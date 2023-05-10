@@ -254,6 +254,10 @@ input[type=number] {
     font-size:13px;
 }
 
+#menu .menu .item a{
+    color:rgb(255,255,255);
+}
+
 #menu .menu .item .white{
     position:absolute;
     top:0;
