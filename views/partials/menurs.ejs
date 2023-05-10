@@ -28,8 +28,13 @@
 	</div>
 	<div class="menu rMenu">
 		<div class="item" data-name="">
-			<img src="/icons/lang.svg" width="20" class="black">
-			<img src="/icons/lang-white.svg" width="20" class="white">
+			<!--<img src="/icons/lang.svg" width="20" class="black">
+			<img src="/icons/lang-white.svg" width="20" class="white">-->
+			<a href="" id="lang2">ENG</a>
+			<script>
+				var pageUrl	=	window.location.href;
+				document.getElementById("lang2").setAttribute("href",pageUrl.replace(".eu/rs/",".eu/"))
+			</script>
 		</div>
 		<div class="item rItemHandle" onclick="responsiveMenuOpen(this)">
 			<div class="topHandle handle"></div>
