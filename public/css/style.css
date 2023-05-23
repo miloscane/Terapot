@@ -200,7 +200,7 @@ input[type=number] {
 }
 
 #menu .logo{
-    width:115px;
+    width:100px;
     -webkit-transition:all ease 0.5s;
     -moz-transition:all ease 0.5s;
     -ms-transition:all ease 0.5s;
@@ -234,7 +234,7 @@ input[type=number] {
 }
 
 #menu .menu{
-    width:calc(100% - 115px);
+    width:calc(100% - 100px);
     text-align:right;
 }
 
@@ -244,13 +244,32 @@ input[type=number] {
     margin-left: 40px;
     cursor: pointer;
     position:relative;
-    font-weight:300;
+    font-weight:400;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     -ms-transition: all ease 0.5s;
     -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
     font-size:13px;
+}
+
+#menu .menu .item .border{
+    width:0%;
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    height:2px;
+    background-color:rgb(97,181,1);
+    border-radius:2px;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+#menu .menu .item:hover .border{
+    width:100%;
 }
 
 #menu .menu .item a{
@@ -325,9 +344,10 @@ input[type=number] {
 }
 
 .blackMenu{
-    background-color:rgba(0,0,0,0.2);
+    background-color:rgba(26,26,26,0.94);
+    /*background-color:rgba(0,0,0,0.2);
     background: rgba(0,0,0,0.8);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 41%, rgba(0,0,0,0) 100%);*/
     padding:15px 5% !important;
 }
 
@@ -467,7 +487,7 @@ input[type=number] {
 }
 
 .home .writting .buttonsWrap .button:hover{
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(97,181,1,1);
     color:rgb(255,255,255);
 
 }
@@ -693,7 +713,7 @@ input[type=number] {
 }
 
 .diagramsWrap{
-    color:rgb(219,219,219);
+    color:rgb(255,255,255);
     font-size:0px;
     text-align:center;
     position:absolute;
@@ -2409,6 +2429,8 @@ input[type=number] {
     .contact .lighterDark .title{
         padding:20px 0;
         padding-top:70px;
+        padding-bottom:0px;
+        font-size:18px;
     }
 
     .pot .product .arrowLeft{
@@ -2494,7 +2516,7 @@ input[type=number] {
 @media screen and (max-width: 650px) {
 
     .home .writting{
-        top:80px;
+        top:127px;
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -2503,17 +2525,19 @@ input[type=number] {
     }
 
     #menu .logo{
-        width:100px;
+        width:70px;
     }
 
     #menu .menu{
-        width:calc(100% - 100px);
+        width:calc(100% - 70px);
     }
 
     .home .writting .title{
-        font-size:22px;
-        line-height:36px;
+        /*font-size:22px;
+        line-height:36px;*/
         margin-bottom:10px;
+        font-size: 28px;
+        line-height:32px;
     }
 
     .home .writting .text{
@@ -2521,6 +2545,11 @@ input[type=number] {
         font-size:10px;
         line-height:14px;
         margin-bottom:10px;
+        display:none;
+    }
+
+    .home .writting .buttonsWrap{
+        margin-top:35px;
     }
 
     .home .writting .buttonsWrap .button{
@@ -2530,7 +2559,7 @@ input[type=number] {
         width:90px;
         margin-bottom:10px;
         text-align:center;
-        border:1px solid rgb(0,0,0);
+        border:2px solid rgb(0,0,0);
     }
 
     .products .product{
@@ -2763,6 +2792,43 @@ input[type=number] {
 
     #site-wrap .pot{
         padding-top:70px !important;
+    }
+
+    .pot .responsive .dots{
+        bottom:5vw;
+    }
+
+    .pot .responsive .dots .dot{
+        width:5vw;
+        height: 1vw;
+    }
+
+    .fiberglass .responsiveInlinePlanters{
+        display:inline-block;
+        vertical-align: top;
+        width:58%;
+        text-align:left;
+    }
+    .fiberglass .plantersWrap{
+        display:inline-block;
+        vertical-align: top;
+        width:40%;
+        padding-top:100px;
+    }
+
+    .fiberglass .plantersWrap .planter{
+        width:90%;
+        display:block;
+        margin-bottom:20px;
+    }
+
+    .fiberglass .title{
+        padding-left:5px;
+    }
+
+    .fiberglass .text{
+        font-size:13px;
+        line-height:22px;
     }
 
 }
