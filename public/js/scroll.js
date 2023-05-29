@@ -169,6 +169,21 @@ function scrollDirectlyToSection(sectionNum){
   }
 }
 
+if(window.location.href.includes("?sectionnum=")){
+  var sectionName = window.location.href.split("?sectionnum=")[1];
+  var sectionNum  = -1;
+  for(var i=0;i<sections.length;i++){
+    if(sections[i].dataset.name == sectionName){
+      sectionNum  = i;
+      break;
+    }
+  }
+  if(sectionNum>=0){
+    sections[sectionNum].scrollIntoView(true)
+  }else{
+    console.log("Not sure where to scroll")
+  }
+}
 function menuScrollToSection(elem){
   var sectionName = elem.dataset.name;
   var sectionNum  = -1;
@@ -190,14 +205,13 @@ function menuScrollToSection(elem){
   }else{
     if(elem.dataset.sectionnum){
       if(window.location.href.includes(".eu/rs")){
-        //window.location.href = "/rs/#sectionnum="+elem.dataset.sectionnum
+        window.location.href = "/rs/?sectionnum="+elem.dataset.name
       }else{
-        //window.location.href = "/#sectionnum="+elem.dataset.sectionnum
+        window.location.href = "/?sectionnum="+elem.dataset.name
       }
       
     }
     
-    console.log("Couldn't figure where to scroll based on name")
   }
   
 }

@@ -2563,11 +2563,15 @@ input[type=number] {
     }
 
     #menu .logo{
-        width:70px;
+        width:70px !important;
     }
 
     #menu .menu{
-        width:calc(100% - 100px);
+        width:calc(100% - 70px) !important;
+    }
+
+    #menu #main-menu{
+        top:52px;
     }
 
     .home .writting .title{
