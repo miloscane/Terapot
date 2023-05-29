@@ -214,8 +214,15 @@ if(urlArray.length>1){
   }
 }
 
+if(window.location.href.includes("?scrollTo=")){
+  window.scrollTo(0,Number(window.location.href.split("?scrollTo=")[1]))
+}
+
 function scrolled(){
   var scrollPosition = window.pageYOffset;
+  document.getElementById("lang").setAttribute("href",document.getElementById("lang").href.split("?scrollTo=")[0]+"?scrollTo="+window.pageYOffset)
+  document.getElementById("lang2").setAttribute("href",document.getElementById("lang2").href.split("?scrollTo=")[0]+"?scrollTo="+window.pageYOffset)
+  
   if(vw<959){
     if(scrollPosition>10){
       document.getElementById("menu").classList.add("whiteMenu");
