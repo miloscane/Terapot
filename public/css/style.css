@@ -319,7 +319,7 @@ input[type=number] {
 }
 
 .whiteMenu .logo{
-    width:70px !important;
+    width:100px !important;
 }
 
 
@@ -352,7 +352,7 @@ input[type=number] {
 }
 
 .blackMenu .logo{
-    width:70px !important;
+    width:100px !important;
 }
 
 
@@ -487,9 +487,9 @@ input[type=number] {
 }
 
 .home .writting .buttonsWrap .button:hover{
-    background-color:rgba(97,181,1,1);
+    background-color:rgba(111,178,105,1);
     color:rgb(255,255,255);
-
+    border:3px solid rgb(111,178,105);
 }
 
 .products{
@@ -758,6 +758,8 @@ input[type=number] {
 
 .diagram2{
     background-color:rgb(33,32,34);
+    padding-bottom:50px;
+    padding-top:50px;
 }
 
 .diagram2 .image{
@@ -2232,7 +2234,7 @@ input[type=number] {
     }
 
     #body .whiteMenu .menu{
-        width:calc(100% - 70px);
+        width:calc(100% - 100px);
     }
 
     .products .product:hover .overlay{
@@ -2529,7 +2531,7 @@ input[type=number] {
     }
 
     #menu .menu{
-        width:calc(100% - 70px);
+        width:calc(100% - 100px);
     }
 
     .home .writting .title{
@@ -2829,6 +2831,10 @@ input[type=number] {
     .fiberglass .text{
         font-size:13px;
         line-height:22px;
+    }
+
+    .hideTextOnPhone{
+        opacity:0;
     }
 
 }
