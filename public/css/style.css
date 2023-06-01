@@ -2624,8 +2624,51 @@ input[type=number] {
     }
 
     #menu .menu .item:hover .subMenu{
-        max-height:200px;
+        max-height:300px;
     }
+
+    #body .blackMenu .item .subMenu{
+        padding-top:0px !important;
+        width:100% !important;
+        margin-left:0% !important;
+        padding-top:0px !important;
+    }
+
+    #body .whiteMenu .item .subMenu{
+        padding-top:0px !important;
+        width:100% !important;
+        margin-left:0% !important;
+        padding-top:0px !important;
+    }
+
+    #body .whiteMenu .item .subMenu .wrap{
+        padding-top:0px !important;
+        background-color:rgba(0,0,0,0) !important;
+        width:100% !important;
+        margin-left:0% !important;
+
+    }
+
+    #body .whiteMenu .item .subMenu .inline{
+        background-color:rgba(0,0,0,0) !important;
+    }
+
+    #menu .menu .item .subMenu .inline:last-child .item{
+        text-align:right !important;
+    }
+
+    #menu .menu .item .subMenu .inline:first-child .item{
+        text-align:right !important;
+    }
+    #menu .menu .item .subMenu .inline .item, #menu .menu .item .subMenu .wrap .item{
+        padding:2px 0;
+        display:block !important;
+    }
+
+    #body .whiteMenu .item .border{
+        bottom:0px !important;
+    }
+
 }
 
 @media screen and (max-width: 650px) {

@@ -205,11 +205,20 @@ function menuScrollToSection(elem){
   }else{
     if(elem.dataset.sectionnum){
       if(window.location.href.includes(".eu/rs")){
-        window.location.href = "/rs/?sectionnum="+elem.dataset.name
+        if((sectionName=="products" || sectionName=="fiberglass") && vw<959 && elem.dataset.disablenav=="1"){
+
+        }else{
+          window.location.href = "/rs/?sectionnum="+elem.dataset.name
+        }
+        
       }else{
-        window.location.href = "/?sectionnum="+elem.dataset.name
+        if((sectionName=="products" || sectionName=="fiberglass") && vw<959 && elem.dataset.disablenav=="1"){
+
+        }else{
+          window.location.href = "/?sectionnum="+elem.dataset.name
+        }
+        
       }
-      
     }
     
   }
