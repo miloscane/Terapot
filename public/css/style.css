@@ -663,6 +663,10 @@ input[type=number] {
 
 .arrivals{
     background: linear-gradient(180deg, rgba(20,19,17,1) 0%, rgba(32,31,29,1) 100%);
+    height:auto;
+    background-image:url(/images/New-New-Arrivals-Background.jpg);
+    background-size:auto 100%;
+    background-repeat: no-repeat;
 }
 
 .arrivals .responsive{
@@ -683,13 +687,11 @@ input[type=number] {
 
 .arrivals #arriving-products .item{
     width:100vw;
-    height:100vh;
     max-width:1920px;
     text-align:center;
     display:inline-block;
     vertical-align: middle;
     position:relative;
-    margin-top:-132px;
 }
 
 .arrivals .navigation{

@@ -206,7 +206,7 @@ function menuScrollToSection(elem){
     if(elem.dataset.sectionnum){
       if(window.location.href.includes(".eu/rs")){
         if((sectionName=="products" || sectionName=="fiberglass") && vw<959 && elem.dataset.disablenav=="1"){
-
+          
         }else{
           window.location.href = "/rs/?sectionnum="+elem.dataset.name
         }
