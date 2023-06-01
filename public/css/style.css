@@ -268,6 +268,44 @@ input[type=number] {
     transition: all ease 0.5s;
 }
 
+#body .whiteMenu .item .border{
+    bottom:-23px !important;
+}
+
+#body .blackMenu .item .border{
+    bottom:-23px !important;
+}
+
+#body .blackMenu .item .subMenu{
+    padding-top:20px !important;
+}
+
+#body .whiteMenu .item .subMenu{
+    padding-top:20px !important;
+}
+
+#body .blackMenu .item .subMenu .item{
+    color:rgb(255,255,255) !important;
+}
+
+#body .whiteMenu .item .subMenu .item{
+    color:rgb(255,255,255) !important;
+}
+#body .whiteMenu .item .subMenu .inline{
+    background-color:rgba(26,26,26,0.94);
+}
+
+#body .whiteMenu .item .subMenu .wrap{
+    background-color:rgba(26,26,26,0.94);
+}
+#body .blackMenu .item .subMenu .inline{
+    background-color:rgba(26,26,26,0.94);
+}
+
+#body .blackMenu .item .subMenu .wrap{
+    background-color:rgba(26,26,26,0.94);
+}
+
 #menu .menu .item:hover .border{
     width:100%;
 }
@@ -320,10 +358,29 @@ input[type=number] {
     -ms-transition: all ease 1s;
     -o-transition: all ease 1s;
     transition: all ease 1s;
-    overflow:hidden;
+    overflow-y:hidden;
     position:absolute;
     top:calc(100% + 3px);
-    background-color:rgb(111,178,105);
+    background-color:rgba(26,26,26,0);
+    font-size:0;
+    width:250%;
+    margin-left:-75%;
+}
+
+#menu .menu .item .subMenu .inline{
+    width:50%;
+    vertical-align:top;
+    display:inline-block;
+}
+
+#menu .menu .item .subMenu .inline:first-child{
+    padding-right:5px;
+    text-align:right;
+}
+
+#menu .menu .item .subMenu .inline:last-child{
+    padding-left:5px;
+    text-align:left;
 }
 
 #menu .menu .item:hover .subMenu{
@@ -331,11 +388,29 @@ input[type=number] {
 }
 
 #menu .menu .item .subMenu .item{
+    font-size:13px;
     display:block;
     margin-left:0;
-    padding:2px 5px;
+    padding:5px 0px;
+    text-align:center;
+    opacity:0.4;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+#menu .menu .item .subMenu .item:hover{
+    opacity:1;
+}
+
+#menu .menu .item .subMenu .inline:first-child .item{
+    text-align:right;
+}
+
+#menu .menu .item .subMenu .inline:last-child .item{
     text-align:left;
-    padding-left:5px;
 }
 
 .whiteMenu{
@@ -1191,7 +1266,7 @@ input[type=number] {
 }
 
 .fiberglass .title{
-    font-weight:700;
+    font-weight:400;
     font-size:50px;
     padding-top:0px;
     margin-bottom:60px;
@@ -1229,7 +1304,9 @@ input[type=number] {
 }
 
 .fiberglass .buttonWrap .button:hover{
-    background-color:rgba(255,255,255,0.3);
+    background-color:rgba(111,178,105,1);
+    color:rgb(255,255,255);
+    border:2px solid rgb(111,178,105);
 }
 
 .fiberglass .plantersWrap{
